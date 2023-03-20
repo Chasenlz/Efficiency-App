@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efficiency App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 48px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #777;
+        }
+        a {
+            display: inline-block;
+            font-size: 18px;
+            color: #0070f3;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #0070f3;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        a:hover {
+            background-color: #0070f3;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Efficiency App</h1>
+    <p>Improve your productivity with the Efficiency App!</p>
+    <a href="#" onclick="alert('Link to nowhere!')">Download Efficiency App</a>
+</body>
+</html>
