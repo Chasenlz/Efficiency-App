@@ -71,12 +71,18 @@
 <body>
   <div class="container">
     <img src="efficiency logo.jpg" alt="Efficiency Logo" class="centered-image">
-    <button id="clickButton" class="centered-button">Click me!</button>
+    <button id="clickButton" class="centered-button" onclick="countClick()">Click me!</button>
     <p id="clickCounter" class="centered-text">0 clicks</p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    let clickCount = 0;
+    function countClick() {
+      clickCount++;
+      document.getElementById("clickCounter").innerHTML = clickCount + " clicks";
+    }
+  </script>
   <h1>Efficiency App</h1>
   <p>Improve your productivity with the Efficiency App!</p>
-  <a href="#" onclick="alert('Link to nowhere!')">Download Efficiency App</a>
+  <a href="#" onclick="alert('Link to nowhere!')">Download the Efficiency App</a>
 </body>
 </html>
