@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Click Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        img {
+            cursor: pointer;
+        }
     <style>
         body {
             background-color: #000000;
@@ -32,7 +37,7 @@
     </style>
 </head>
 <body>
-    <img src="Efficiencylogo.jpg" alt="Efficiency Logo" class="logo">
+    <img src="Efficiencylogo.jpg" alt="Efficiency Logo" id="clickable-logo">
     <button class="button" onclick="handleClick()">Click me</button>
 
     <script>
@@ -40,5 +45,18 @@
             alert('You clicked the button!');
         }
     </script>
+        $(document).ready(function() {
+            $("#clickable-logo").on("click", function() {
+                $.ajax({
+                    url: "https://api.countapi.xyz/hit/yourusername.github.io/visits",
+                    success: function(data) {
+                        console.log("Click count: " + data.value);
+                    }
+                });
+            });
+        });
 </body>
 </html>
+
+
+    
