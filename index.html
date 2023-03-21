@@ -1,3 +1,5 @@
+Here's the fixed HTML code:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,6 @@
         img {
             cursor: pointer;
         }
-    <style>
         body {
             background-color: #000000;
             color: #FFFFFF;
@@ -39,22 +40,22 @@
 <body>
     <img src="Efficiencylogo.jpg" alt="Efficiency Logo" id="clickable-logo">
     <button class="button" onclick="handleClick()">Click me</button>
+<script>
+    function handleClick() {
+        alert('Thank you for clicking the button, the app is still being developed and this is a way we can gauge interest, thank you for your interest!');
+    }
 
-    <script>
-        function handleClick() {
-            alert('Thank you for clicking the button, the app is still being developed and this a way we can gage interested, thank you for your interest!');
-        }
-    </script>
-        $(document).ready(function() {
-            $("#clickable-logo").on("click to learn more about the app", function() {
-                $.ajax({
-                    url: "https://api.countapi.xyz/hit/yourusername.github.io/visits",
-                    success: function(data) {
-                        console.log("Click count: " + data.value);
-                    }
-                });
+    $(document).ready(function() {
+        $("#clickable-logo").on("click", function() {
+            $.ajax({
+                url: "https://api.countapi.xyz/hit/chasenlz.github.io/visits",
+                success: function(data) {
+                    console.log("Click count: " + data.value);
+                }
             });
         });
+    });
+</script>
 </body>
 </html>
 
