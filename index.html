@@ -30,11 +30,19 @@
             border: none;
             cursor: pointer;
         }
+        .blurb {
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <img src="Efficiencylogo.jpg" alt="Efficiency Logo" class="logo">
-    <button class="button" onclick="handleClick()">Download the App!</button>
+    <div class="blurb">
+        <h2>About the App</h2>
+        <p>Our app is designed to help you increase your productivity and efficiency. With features such as task tracking, time management, and goal setting, you can take control of your work and accomplish more in less time. Try it out and see the difference it can make!</p>
+    </div>
+    <button class="button" onclick="handleClick()">Click me</button>
     <script>
         function handleClick() {
             $.ajax({
