@@ -6,9 +6,6 @@
     <title>Click Test</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-        img {
-            cursor: pointer;
-        }
         body {
             background-color: #000000;
             color: #FFFFFF;
@@ -36,26 +33,18 @@
     </style>
 </head>
 <body>
-    <img src="Efficiencylogo.jpg" alt="Efficiency Logo" id="clickable-logo">
-    <button class="button" onclick="handleClick()">Click me</button>
-<script>
-    function handleClick() {
-        alert('Thank you for clicking the button, the app is still being developed and this is a way we can gauge interest, thank you for your interest!');
-    }
-
-    $(document).ready(function() {
-        $("#clickable-logo").on("click", function() {
+    <img src="Efficiencylogo.jpg" alt="Efficiency Logo" class="logo">
+    <button class="button" onclick="handleClick()">Download the App!</button>
+    <script>
+        function handleClick() {
             $.ajax({
                 url: "https://api.countapi.xyz/hit/chasenlz.github.io/visits",
                 success: function(data) {
                     console.log("Click count: " + data.value);
                 }
             });
-        });
-    });
-</script>
+            alert('Thank you for clicking the button, the app is still being developed and this is a way we can gauge interest, thank you for your interest!');
+        }
+    </script>
 </body>
 </html>
-
-
-    
