@@ -5,61 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Efficiency: Your AI-Powered Budgeting & Planning App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <style>
-        body {
-            background-color: #000000;
-            color: #FFFFFF;
-        }
-        .logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 250px;
-            height: 250px;
-        }
-        .button {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #FFFFFF;
-            color: #000000;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .blurb {
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <img src="Efficiencylogo.jpg" alt="Efficiency Logo" class="logo">
-<body>
+
     <h1 class="blurb"><b>Efficiency: Your AI-Powered Budgeting & Planning App</b></h1>
-    <div class="blurb">
-        <p>Efficiency is the ultimate app to streamline your financial goals, whether it's travel, savings, or investments. Plan your dream trip to Rome in 3 months or set up a personalized savings plan, all with the help of AI.</p>
-        <ul>
-            <li><b>Smart Saving</b>: Input your current savings and desired goals, and Efficiency will calculate weekly savings targets to reach your objectives.</li>
-            <li><b>Optimal Travel Planning</b>: Our AI analyzes past flight data to predict the best time to fly, considering your preferred airlines like Lufthansa or Delta.</li>
-            <li><b>Customized Budgets</b>: Receive tailored budgeting plans to reach your goals in the most efficient and cost-effective way possible.</li>
-        </ul>
-        <p>From general savings to travel planning, Efficiency has your back for all things budgeting!</p>
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'info')">Information</button>
+        <button class="tablinks" onclick=openTab(event, 'chatbot')">Chatbot</button>
     </div>
-    <button class="button" onclick="handleClick()">Download the App!</button>
-    <script>
-        function handleClick() {
-            $.ajax({
-                url: "https://api.countapi.xyz/hit/chasenlz.github.io/visits",
-                success: function(data) {
-                    console.log("Click count: " + data.value);
-                }
-            });
-            alert('Thank you for clicking the button, the app is still being developed and this is a way we can gauge interest, thank you for your interest!');
-        }
-    </script>
-</body>
-</html>
+
+    <!-- Tab content -->
