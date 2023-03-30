@@ -1,49 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Efficiency</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-        }
-        h1, h2, h3 {
-            color: #00aaff;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 50px;
-        }
-        .frame {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-        button {
-            margin: 20px;
-            padding: 10px 20px;
-            background-color: #00aaff;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+	<title>Efficiency Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Efficiency</h1>
-        <p>A website dedicated to improving your productivity and efficiency.</p>
-        <div class="frame">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="375" height="687" src="https://app.uizard.io/p/61460a85/embed" allowfullscreen></iframe>
-        </div>
-        <button onclick="location.href='info.html'">Learn More</button>
-        <button onclick="location.href='contact.html'">Contact Us</button>
-    </div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="info.html">Info</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="appdemo.html">App Demo</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div class="hero">
+			<h1>Efficiency</h1>
+			<p>More than app, a conversation.</p>
+			<a href="#learn-more" class="cta">Learn More</a>
+		</div>
+
+		<section id="about">
+			<div class="image">
+				<img src="your-image.jpg" alt="Efficiency App Screenshot">
+			</div>
+			<div class="text">
+				<h2>About Efficiency</h2>
+				<p>Efficiency is an app designed to put your travel woes at ease. With a suite of powerful tools and an intuitive interface, Efficiency is the ultimate travel solution.</p>
+				<a href="#features" class="cta">See Features</a>
+			</div>
+		</section>
+
+		<section id="features">
+			<h2>Features</h2>
+			<ul>
+				<li><span class="highlight">Task Manager:</span> Going to a new place should be fun and excting, not stressful.</li>
+				<li><span class="highlight">Calendar:</span> Plan your schedule and budget efficiently.</li>
+				<li><span class="highlight">Notes:</span> Connect with travel partners, don't worry if you need add another our AI tool has got you covered.</li>
+				<li><span class="highlight">Analytics:</span> No matter what happens, your preferences, or knowledge of the location, Efficiency is here to help!</li>
+			</ul>
+			<a href="#download" class="cta">Download Now</a>
+		</section>
+
+		<section id="download">
+			<h2>Download Efficiency</h2>
+			<p>Efficiency is available on all major platforms. Download now and start enjoying your trip before you land!</p>
+			<div class="buttons">
+				<a href="#" class="app-store">App Store</a>
+				<a href="#" class="google-play">Google Play</a>
+			</div>
+		</section>
+	</main>
+	
+	<footer>
+		<p>Copyright © Efficiency 
+	</footer>
 </body>
 </html>
