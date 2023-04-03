@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Box Example</title>
+    <style>
+      /* Chat box styles */
+      .chat-box {
+        background-color: #f6f7f9;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+        height: 500px;
+        margin: 20px auto;
+        max-width: 600px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      /* Chat box header styles */
+      .chat-box .header {
+        background-color: #0098db;
+        border-radius: 10px 10px 0 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      /* Chat box body styles */
+      .chat-box .body {
+        height: 400px;
+        overflow-y: scroll;
+        padding: 20px;
+      }
+
+      /* Chat box input styles */
+      .chat-box input[type="text"] {
+        border: none;
+        border-top: 1px solid #ccc;
+        bottom: 0;
+        font-size: 18px;
+        padding: 20px;
+        position: absolute;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-box">
+      <div class="header">Chat with us!</div>
+      <div class="body">
+        <p><strong>ChatGPT:</strong> Hi there! How can we help you today?</p>
+        <p><strong>You:</strong> I have a question about your website.</p>
+        <p><strong>ChatGPT:</strong> Sure thing! What's your question?</p>
+        <p><strong>You:</strong> How do I create an account?</p>
+        <p><strong>ChatGPT:</strong> To create an account, simply click the "Sign Up" button in the top right corner of the page and follow the prompts.</p>
+      </div>
+      <input type="text" placeholder="Type your message here" />
+    </div>
+  </body>
+</html>
