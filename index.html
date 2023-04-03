@@ -3,6 +3,94 @@
 <head>
 	<title>Efficiency Landing Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.image {
+			float: right;
+			max-width: 50%;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+			h1 {
+		font-family: Arial, sans-serif;
+		font-size: 48px;
+		color: blue;
+		border-bottom: 2px solid blue;
+		display: inline-block;
+		padding-bottom: 10px;
+		margin-right: 20px;
+	}
+
+	h2 {
+		font-family: "Lucida Console", Monaco, monospace;
+		font-size: 36px;
+		color: blue;
+		border-bottom: 2px solid blue;
+		display: inline-block;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size: 18px;
+		color: black;
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+
+	.highlight {
+		font-weight: bold;
+		color: blue;
+	}
+
+	section {
+		padding: 50px 0;
+	}
+
+	.cta {
+		background-color: blue;
+		color: white;
+		padding: 10px 20px;
+		border-radius: 5px;
+		text-decoration: none;
+		display: inline-block;
+		margin-top: 30px;
+		font-size: 18px;
+		font-family: Arial, sans-serif;
+	}
+
+	.buttons {
+		margin-top: 30px;
+	}
+
+	.app-store, .google-play {
+		display: inline-block;
+		width: 200px;
+		height: 60px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-right: 20px;
+		border-radius: 5px;
+		font-size: 0;
+		text-indent: -9999px;
+	}
+
+	.app-store {
+		background-image: url("app-store.png");
+	}
+
+	.google-play {
+		background-image: url("google-play.png");
+	}
+
+	footer {
+		background-color: #f2f2f2;
+		padding: 20px;
+		text-align: center;
+	}
+
+</style>
 </head>
 <body>
 	<header>
@@ -14,48 +102,290 @@
 			</ul>
 		</nav>
 	</header>
-
 	<main>
-		<div class="hero">
-			<h1>Efficiency</h1>
-			<p>More than app, a conversation.</p>
-			<a href="#learn-more" class="cta">Learn More</a>
+	<div class="hero">
+		<h1>Efficiency</h1>
+		<p>More than app, a conversation.</p>
+		<a href="#learn-more" class="cta">Learn More</a>
+	</div>
+
+	<section id="about">
+		<div class="image">
+			<img src="iphone.jpg" alt="Efficiency App Screenshot">
 		</div>
+		<div class="text">
+			<h2>About Efficiency</h2>
+			<p>Efficiency is an app designed to put your travel woes at ease. With a suite of powerful tools and an intuitive interface, Efficiency is the ultimate travel solution.</p>
+			<a href="#features" class=cta">See Features</a>
+</div>
+</section>
+<section id="features">
+	<h2 style="color: blue; font-family: Arial, sans-serif; border-top: 2px solid black; padding-top: 20px;">Features</h2>
+	<ul>
+		<li><span class="highlight">Task Manager:</span> Going to a new place should be fun and exciting, not stressful.</li>
+		<li><span class="highlight">Calendar:</span> Plan your schedule and budget efficiently.</li>
+		<li><span class="highlight">Notes:</span> Connect with travel partners, don't worry if you need to add another, our AI tool has got you covered.</li>
+		<li><span class="highlight">Analytics:</span> No matter what happens, your preferences or knowledge of the location, Efficiency is here to help!</li>
+	</ul>
+	<a href="#download" class="cta">Download Now</a>
+</section>
 
-		<section id="about">
-			<div class="image">
-				<img src="iphone.jpg" alt="Efficiency App Screenshot">
-			</div>
-			<div class="text">
-				<h2>About Efficiency</h2>
-				<p>Efficiency is an app designed to put your travel woes at ease. With a suite of powerful tools and an intuitive interface, Efficiency is the ultimate travel solution.</p>
-				<a href="#features" class="cta">See Features</a>
-			</div>
-		</section>
-
-		<section id="features">
-			<h2>Features</h2>
-			<ul>
-				<li><span class="highlight">Task Manager:</span> Going to a new place should be fun and excting, not stressful.</li>
-				<li><span class="highlight">Calendar:</span> Plan your schedule and budget efficiently.</li>
-				<li><span class="highlight">Notes:</span> Connect with travel partners, don't worry if you need add another our AI tool has got you covered.</li>
-				<li><span class="highlight">Analytics:</span> No matter what happens, your preferences, or knowledge of the location, Efficiency is here to help!</li>
-			</ul>
-			<a href="#download" class="cta">Download Now</a>
-		</section>
-
-		<section id="download">
-			<h2>Download Efficiency</h2>
-			<p>Efficiency is available on all major platforms. Download now and start enjoying your trip before you land!</p>
-			<div class="buttons">
-				<a href="#" class="app-store">App Store</a>
-				<a href="#" class="google-play">Google Play</a>
-			</div>
-		</section>
-	</main>
-	
-	<footer>
-		<p>Copyright © Efficiency 
-	</footer>
+<section id="download">
+	<h2 style="color: blue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border-top: 2px solid black; padding-top: 20px;">Download Efficiency</h2>
+	<p>Efficiency is available on all major platforms. Download now and start enjoying your trip before you land!</p>
+	<div class="buttons">
+		<a href="#" class="app-store">App Store</a>
+		<a href="#" class="google-play">Google Play</a>
+	</div>
+</section>
+</main>
+<footer>
+	<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: black; border-top: 2px solid black; padding-top: 20px;">Copyright © Efficiency 
+</footer>
 </body>
 </html>
+<style>
+.hero {
+	background-color: #efefef;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.image {
+	float: right;
+	margin: 0 0 20px 20px;
+	width: 50%;
+}
+
+.image img {
+	width: 100%;
+	height: auto;
+}
+
+.text {
+	float: left;
+	width: 45%;
+	padding: 20px;
+}
+
+.highlight {
+	font-weight: bold;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	margin: 0;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #efefef;
+}
+
+.cta {
+	display: inline-block;
+	background-color: #333;
+	color: white;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-top: 20px;
+	text-decoration: none;
+}
+
+.cta:hover {
+	background-color: #efefef;
+	color: #333;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.app-store {
+	display: inline-block;
+	background-color: #333;
+	color: white;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+.app-store:hover {
+	background-color: #efefef;
+	color: #333;
+}
+
+.google-play {
+	display: inline-block;
+	background-color: #333;
+	color : #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+margin-right: 10px;
+}
+
+/* Typography */
+h1 {
+font-family: 'Roboto', sans-serif;
+font-size: 3em;
+color: #333;
+margin: 0;
+}
+
+h2 {
+font-family: 'Montserrat', sans-serif;
+font-size: 2em;
+color: #0072ff;
+margin-top: 0;
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+font-size: 1.2em;
+color: #000;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+.highlight {
+color: #0072ff;
+font-weight: bold;
+}
+
+.cta {
+display: inline-block;
+background-color: #0072ff;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+margin-top: 20px;
+}
+
+.cta:hover {
+background-color: #005dff;
+}
+
+/* Layout */
+header {
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+display: inline-block;
+margin-right: 20px;
+}
+
+nav a {
+color: #0072ff;
+text-decoration: none;
+}
+
+.hero {
+background-image: url('background.jpg');
+background-size: cover;
+background-position: center;
+color: #fff;
+text-align: center;
+padding: 100px 0;
+}
+
+#about {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 100px 0;
+}
+
+.image img {
+max-width: 100%;
+height: auto;
+margin-right: 50px;
+float: right;
+}
+
+#features {
+background-color: #f2f2f2;
+padding: 100px 0;
+}
+
+#features ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+#features li {
+font-size: 1.2em;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+#download {
+background-color: #0072ff;
+color: #fff;
+text-align: center;
+padding: 100px 0;
+}
+
+#download h2, #download p {
+color: #fff;
+}
+
+#download .buttons {
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+.hero {
+padding: 50px 0;
+}
+#about {
+	flex-direction: column;
+	padding: 50px 0;
+}
+
+.image img {
+	margin-right: 0;
+	margin-bottom: 50px;
+	float: none;
+	max-width: 60%;
+}
+}
+
+
+
+
