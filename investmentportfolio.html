@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Investment Portfolio</title>
+  <style>
+    /* Reset default margin and padding */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Add global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Investment Portfolio</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Stock</th>
+          <th>Symbol</th>
+          <th>Price</th>
+          <th>Change</th>
+          <th>% Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Company A</td>
+          <td>A</td>
+          <td>$100.00</td>
+          <td>+5.00</td>
+          <td>+5.00%</td>
+        </tr>
+        <tr>
+          <td>Company B</td>
+          <td>B</td>
+          <td>$200.00</td>
+          <td>-10.00</td>
+          <td>-5.00%</td>
+        </tr>
+        <!-- Add more rows for other stocks in your portfolio -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
