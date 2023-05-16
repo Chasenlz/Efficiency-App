@@ -82,23 +82,30 @@
   </div>
 
   <section id="about" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m4">
-          <img src="Me Simple.png" alt="Me" class="responsive-img">
-        </div>
-        <div class="col s12 m8">
-          <h3>About Me</h3>
-          <p>Hi there! I'm Chase Lazarian, a finance professional with expertise in investment analysis and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
-          <p>Feel free to contact me:</p>
-          <ul>
-            <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">LinkedIn</a></li>
-          </ul>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4">
+        <img src="Me Simple.png" alt="Me" class="responsive-img icon-img">
+      </div>
+      <div class="col s12 m8">
+        <h3>About Me</h3>
+        <p>Hi there! I'm Chase Lazarian, a finance professional with expertise in investment analysis and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+        <p>Feel free to contact me:</p>
+        <ul>
+          <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon icon-img">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon icon-img">LinkedIn</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .icon-img {
+    width: 32px;
+    height: 32px;
+  }
+</style>
 
   <section id="investment" class="section">
     <div class="container">
@@ -118,17 +125,71 @@
     </div>
   </section>
 
+  <main>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#about-tab">About</a></li>
+        <li class="tab col s3"><a href="#investment-tab">Investment</a></li>
+        <li class="tab col s3"><a href="#resume-tab">Resume</a></li>
+        <li class="tab col s3"><a href="#portfolio-tab">Portfolio</a></li>
+      </ul>
+    </div>
+    <div id="about-tab" class="col s12">
+      <!-- About section content -->
+      <section id="about" class="section">
+        <!-- ... About section code ... -->
+      </section>
+    </div>
+    <div id="investment-tab" class="col s12">
+      <!-- Investment section content -->
+      <section id="investment" class="section">
+        <!-- ... Investment section code ... -->
+      </section>
+    </div>
+    <div id="resume-tab" class="col s12">
+      <!-- Resume section content -->
+      <section id="resume" class="section">
+        <!-- ... Resume section code ... -->
+      </section>
+    </div>
+    <div id="portfolio-tab" class="col s12">
+      <!-- Portfolio section content -->
+      <section id="portfolio" class="section">
+        <!-- ... Portfolio section code ... -->
+      </section>
+    </div>
+  </div>
+
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large blue">
       <i class="large material-icons">menu</i>
     </a>
     <ul>
-      <li><a href="#investment" class="btn-floating blue"><i class="material-icons">attach_money</i></a></li>
-      <li><a href="#resume" class="btn-floating blue"><i class="material-icons">description</i></a></li>
-      <li><a href="#portfolio" class="btn-floating blue"><i class="material-icons">folder</i></a></li>
+      <li><a href="#about-tab" class="btn-floating blue"><i class="material-icons">info</i></a></li>
+      <li><a href="#investment-tab" class="btn-floating blue"><i class="material-icons">attach_money</i></a></li>
+      <li><a href="#resume-tab" class="btn-floating blue"><i class="material-icons">description</i></a></li>
+      <li><a href="#portfolio-tab" class="btn-floating blue"><i class="material-icons">folder</i></a></li>
     </ul>
   </div>
 </main>
+
+<!-- Materialize - Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Initialize tabs -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var tabElems = document.querySelectorAll(".tabs");
+    M.Tabs.init(tabElems);
+
+    var fabElem = document.querySelectorAll(".fixed-action-btn");
+    M.FloatingActionButton.init(fabElem, {
+      direction: "left",
+      hoverEnabled: false
+    });
+  });
+</script>
+
 
 <!-- Materialize - Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
