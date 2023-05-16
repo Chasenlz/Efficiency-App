@@ -136,7 +136,7 @@ blockquote * {
 }
 
 nav {
-  background: #fff;
+  background: black; /* Updated to black */
   box-shadow: none;
   height: 0;
   color: #fff;
@@ -155,11 +155,11 @@ nav a {
 
 main {
   background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
+  padding-left:190px;
 }
 
 dl {
-  margin-top: 0.5rem;
+margin-top: 0.5rem;
 }
 
 dd {
@@ -170,4 +170,5 @@ font-weight: 500;
 .tabs .tab a {
 color: #fff !important;
 }
+
 
