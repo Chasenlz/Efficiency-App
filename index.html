@@ -14,8 +14,49 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
   <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
     .section {
       padding: 30px 0;
+    }
+
+    .fixed-action-btn {
+      bottom: 40px;
+      right: 40px;
+    }
+
+    .fixed-action-btn .btn-floating {
+      background-color: blue;
+    }
+
+    .fixed-action-btn .btn-floating i {
+      color: white;
+    }
+
+    .fixed-action-btn ul li a.btn-floating {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+    }
+
+    .fixed-action-btn ul li a i {
+      font-size: 32px;
+    }
+
+    .tabs .tab a {
+      color: white;
+    }
+
+    .tabs .tab a:hover {
+      background-color: blue;
+    }
+
+    .tabs .tab a.active {
+      background-color: blue;
     }
   </style>
 </head>
@@ -30,24 +71,11 @@
   </header>
 
   <main>
-    <div class="container">
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large blue">
-          <i class="large material-icons">menu</i>
-        </a>
-        <ul>
-          <li><a href="#investment" class="btn-floating blue"><i class="material-icons">attach_money</i></a></li>
-          <li><a href="#resume" class="btn-floating blue"><i class="material-icons">description</i></a></li>
-          <li><a href="#portfolio" class="btn-floating blue"><i class="material-icons">folder</i></a></li>
-        </ul>
-      </div>
-    </div>
-
-    <section id="about" class="section scrollspy">
+    <section id="about" class="section">
       <div class="container">
         <div class="row">
           <div class="col s12 m4">
-            <img src="Me Smimple.png" alt="Me" class="responsive-img">
+            <img src="Me Simple.png" alt="Me" class="responsive-img">
           </div>
           <div class="col s12 m8">
             <h3>About Me</h3>
@@ -62,25 +90,36 @@
       </div>
     </section>
 
-    <section id="investment" class="section scrollspy">
+    <section id="investment" class="section">
       <div class="container">
         <iframe src="investmentportfolio.html" style="width: 100%; height: 600px; border: none;"></iframe>
       </div>
     </section>
 
-    <section id="resume" class="section scrollspy">
+    <section id="resume" class="section">
       <div class="container">
-        <iframe src="resume.html" style="width: 100%; height: 600px; border: none;"></iframe>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section scrollspy">
-<div class="container">
-<iframe src="pportfolio.html" style="width: 100%; height: 600px; border: none;"></iframe>
+        <iframe src="resume.html" style="width: 100%; height: 600 px; border: none;"></iframe>
 </div>
 </section>
 
-  </main>
+<section id="portfolio" class="section">
+  <div class="container">
+    <iframe src="pportfolio.html" style="width: 100%; height: 600px; border: none;"></iframe>
+  </div>
+</section>
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large blue">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <li><a href="#investment" class="btn-floating blue"><i class="material-icons">attach_money</i></a></li>
+    <li><a href="#resume" class="btn-floating blue"><i class="material-icons">description</i></a></li>
+    <li><a href="#portfolio" class="btn-floating blue"><i class="material-icons">folder</i></a></li>
+  </ul>
+</div>
+
+</main>
   <!-- Materialize - Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- Initialize tabs and scrollspy -->
@@ -101,4 +140,3 @@
   </script>
 </body>
 </html>
-
