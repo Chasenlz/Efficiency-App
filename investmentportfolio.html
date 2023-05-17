@@ -59,32 +59,32 @@
         <td>BCRX</td>
         <td>2020-04-15</td>
         <td contenteditable="true">114</td>
-        <td>8.56</td>
-        <td contenteditable="true">2.63</td>
+        <td>2.63</td>
+        <td contenteditable="true">8.56</td>
         <td></td>
       </tr>
       <tr>
         <td>SDGR</td>
         <td>2020-03-17</td>
         <td contenteditable="true">5</td>
-        <td>27.62</td>
-        <td contenteditable="true">30.41</td>
+        <td>30.41</td>
+        <td contenteditable="true">27.62</td>
         <td></td>
       </tr>
        <tr>
         <td>TCEHY</td>
         <td>2020-03-17</td>
         <td contenteditable="true">5</td>
-        <td>44.64</td>
-        <td contenteditable="true">22.99</td>
+        <td>22.99</td>
+        <td contenteditable="true">44.64</td>
         <td></td>
       </tr>
        <tr>
         <td>SHOP</td>
         <td>2020-04-07</td>
         <td contenteditable="true">40</td>
-        <td>60.40</td>
-        <td contenteditable="true">35.57</td>
+        <td>35.57</td>
+        <td contenteditable="true">60.40</td>
         <td></td>
       </tr>
       <!-- Add more rows for other stocks -->
@@ -96,8 +96,6 @@
 
   <script>
     function updateVisualization() {
-      var growthInput = document.getElementById("growth-input");
-      var growthPercentage = parseFloat(growthInput.value) / 100;
       var chartData = [];
 
       // Update table rows and calculate growth
@@ -109,7 +107,7 @@
         var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
         rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
 
-        var futureValue = amountPurchased * priceAtPurchase * (1 + growthPercentage);
+        var futureValue = amountPurchased * priceAtPurchase * (1 + growth);
         chartData.push({
           stockSymbol: rows[i].cells[0].textContent,
           futureValue: futureValue.toFixed(2)
