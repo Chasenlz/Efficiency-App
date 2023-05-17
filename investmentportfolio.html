@@ -52,6 +52,7 @@
         <th>Price at Purchase</th>
         <th>Current Price</th>
         <th>Growth</th>
+        <th>Total Value</th>
       </tr>
     </thead>
     <tbody>
@@ -62,6 +63,7 @@
         <td>2.63</td>
         <td contenteditable="true" oninput="updateVisualization()">8.56</td>
         <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>SDGR</td>
@@ -69,6 +71,7 @@
         <td contenteditable="true" oninput="updateVisualization()">5</td>
         <td>30.41</td>
         <td contenteditable="true" oninput="updateVisualization()">27.62</td>
+        <td></td>
         <td></td>
       </tr>
        <tr>
@@ -78,6 +81,7 @@
         <td>22.99</td>
         <td contenteditable="true" oninput="updateVisualization()">44.64</td>
         <td></td>
+        <td></td>
       </tr>
        <tr>
         <td>SHOP</td>
@@ -85,6 +89,7 @@
         <td contenteditable="true" oninput="updateVisualization()">40</td>
         <td>35.57</td>
         <td contenteditable="true" oninput="updateVisualization()">60.40</td>
+        <td></td>
         <td></td>
       </tr>
       <!-- Add more rows for other stocks -->
@@ -100,7 +105,7 @@
     function updateVisualization() {
       var chartData = [];
 
-      // Update table rows and calculate growth
+      // Update table rows and calculate growth and total value
       var rows = document.getElementsByTagName("tbody")[0].rows;
       for (var i = 0; i < rows.length; i++) {
         var amountPurchased = parseFloat(rows[i].cells[2].textContent);
@@ -109,10 +114,14 @@
         var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
         rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
 
+        var totalValue = amountPurchased * currentPrice;
+        rows[i].cells[6].textContent = totalValue.toFixed(2);
+
         var futureValue = amountPurchased * priceAtPurchase * (1 + growth);
         chartData.push({
           stockSymbol: rows[i].cells[0].textContent,
-          futureValue: futureValue.toFixed(2)
+          futureValue: futureValue.toFixed(2),
+          totalValue: totalValue.toFixed(2)
         });
       }
 
@@ -123,10 +132,14 @@
       var chartValues = chartData.map(function (data) {
         return data.futureValue;
       });
+      var chartTotalValues = chartData.map(function (data) {
+        return data.totalValue;
+      });
 
       if (chart) {
         chart.data.labels = chartLabels;
         chart.data.datasets[0].data = chartValues;
+        chart.data.datasets[1].data = chartTotalValues;
         chart.update();
       } else {
         chart = new Chart("chart", {
@@ -138,6 +151,13 @@
               data: chartValues,
               backgroundColor: "rgba(54, 162, 235, 0.5)",
               borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 1
+            },
+            {
+              label: "Total Value",
+              data: chartTotalValues,
+              backgroundColor: "rgba(255, 99, 132, 0.5)",
+              borderColor: "rgba(255, 99, 132, 1)",
               borderWidth: 1
             }]
           },
@@ -170,3 +190,4 @@
 </body>
 
 </html>
+
