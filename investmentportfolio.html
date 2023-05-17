@@ -100,100 +100,99 @@
   <canvas id="chart"></canvas>
 
   <script>
- var chart;
+    var chart;
 
-function updateVisualization() {
-  var chartData = [];
-  var startDate = new Date("2020-03-01"); // Start date for x-axis
+    function updateVisualization() {
+      var chartData = [];
+      var startDate = new Date("2020-03-01"); // Start date for x-axis
 
-  // Update table rows and calculate growth and total value
-  var rows = document.getElementsByTagName("tbody")[0].rows;
-  for (var i = 0; i < rows.length; i++) {
-    var stockSymbol = rows[i].cells[0].textContent;
-    var timeOfPurchase = new Date(rows[i].cells[1].textContent);
-    var amountPurchased = parseFloat(rows[i].cells[2].textContent);
-    var priceAtPurchase = parseFloat(rows[i].cells[3].textContent);
-    var currentPrice = parseFloat(rows[i].cells[4].textContent);
-    var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
-    rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
+      // Update table rows and calculate growth and total value
+      var rows = document.getElementsByTagName("tbody")[0].rows;
+      for (var i = 0; i < rows.length; i++) {
+        var stockSymbol = rows[i].cells[0].textContent;
+        var timeOfPurchase = new Date(rows[i].cells[1].textContent);
+        var amountPurchased = parseFloat(rows[i].cells[2].textContent);
+        var priceAtPurchase = parseFloat(rows[i].cells[3].textContent);
+        var currentPrice = parseFloat(rows[i].cells[4].textContent);
+        var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
+        rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
 
-    var totalValue = amountPurchased * currentPrice;
-    rows[i].cells[6].textContent = totalValue.toFixed(2);
+        var totalValue = amountPurchased * currentPrice;
+        rows[i].cells[6].textContent = totalValue.toFixed(2);
 
-    var timeDiff = Math.abs(timeOfPurchase - startDate);
-    var daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Convert to days
-    var futureValue = amountPurchased * priceAtPurchase * Math.pow(1 + growth, daysDiff / 365);
-    chartData.push({
-      stockSymbol: stockSymbol,
-      futureValue: futureValue.toFixed(2),
-      totalValue: totalValue.toFixed(2),
-      daysDiff: daysDiff
-    });
-  }
-
-  // Generate chart
-  var chartLabels = Array.from({ length: 365 }, (_, i) => {
-    var date = new Date(startDate);
-    date.setDate(date.getDate() + i);
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  });
-  var datasets = [];
-  for (var i = 0; i < chartData.length; i++) {
-    datasets.push({
-      label: chartData[i].stockSymbol,
-      data: Array.from({ length: chartData[i].daysDiff }, (_, j) => chartData[i].futureValue),
-      borderColor: getRandomColor(),
-      borderWidth: 1
-    });
-  }
-
-  if (chart) {
-    chart.data.labels = chartLabels;
-    chart.data.datasets = datasets;
-    chart.update();
-  } else {
-    chart = new Chart("chart", {
-      type: "line",
-      data: {
-        labels: chartLabels,
-        datasets: datasets
-      },
-      options: {
-        scales: {
-          x: {
-            display: true,
-            title: {
-              display: true,
-              text: 'Time'
-            }
-          },
-          y: {
-            display: true,
-            title: {
-              display: true,
-              text: 'Dollars'
-            },
-            beginAtZero: true
-          }
-        }
+        var currentDate = new Date();
+        var daysDiff = Math.ceil((currentDate - startDate) / (1000 * 60 * 60 * 24)); // Convert to days
+        var futureValue = amountPurchased * priceAtPurchase * Math.pow(1 + growth, daysDiff / 365);
+        chartData.push({
+          stockSymbol: stockSymbol,
+          futureValue: futureValue.toFixed(2),
+          totalValue: totalValue.toFixed(2),
+          daysDiff: daysDiff
+        });
       }
-    });
-  }
-}
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+      // Generate chart
+      var chartLabels = Array.from({ length: 365 }, (_, i) => {
+        var date = new Date(startDate);
+        date.setDate(date.getDate() + i);
+        return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+      });
+      var datasets = [];
+      for (var i = 0; i < chartData.length; i++) {
+        datasets.push({
+          label: chartData[i].stockSymbol,
+          data: Array.from({ length: chartData[i].daysDiff }, (_, j) => chartData[i].futureValue),
+          borderColor: getRandomColor(),
+          borderWidth: 1
+        });
+      }
 
-// Initial visualization update
-updateVisualization();     
+      if (chart) {
+        chart.data.labels = chartLabels;
+        chart.data.datasets = datasets;
+        chart.update();
+      } else {
+        chart = new Chart("chart", {
+          type: "line",
+          data: {
+            labels: chartLabels,
+            datasets: datasets
+          },
+          options: {
+            scales: {
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                  text: 'Time'
+                }
+              },
+              y: {
+                display: true,
+                title: {
+                  display: true,
+                  text: 'Dollars'
+                },
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      }
+    }
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Initial visualization update
+    updateVisualization();
   </script>
 </body>
 
 </html>
-
