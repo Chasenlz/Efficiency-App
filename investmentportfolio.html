@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investment Portfolio</title>
 
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <style>
     body {
       color: white;
@@ -37,61 +40,93 @@
     <thead>
       <tr>
         <th>Stock Symbol</th>
-        <th>Price</th>
         <th>Time of Purchase</th>
-        <th>Amount</th>
-        <th>Current Value</th>
+        <th>Amount Purchased</th>
+        <th>Current Price</th>
+        <th>Price at Purchase</th>
+        <th>Growth</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>BCRX</td>
-        <td>100</td>
         <td>2022-01-01</td>
-        <td>10</td>
-        <td>1000</td>
+        <td contenteditable="true">10</td>
+        <td>120</td>
+        <td>100</td>
+        <td></td>
       </tr>
       <tr>
         <td>SDGR</td>
-        <td>200</td>
         <td>2022-02-01</td>
-        <td>5</td>
-        <td>1000</td>
+        <td contenteditable="true">5</td>
+        <td>250</td>
+        <td>200</td>
+        <td></td>
       </tr>
       <!-- Add more rows for other stocks -->
     </tbody>
   </table>
 
   <h2>Visualization</h2>
-  <div id="visualization">
-    <!-- Visualization will be dynamically updated -->
-  </div>
+  <canvas id="chart"></canvas>
 
   <h2>Change Growth Percentage</h2>
-  <label for="growth-input">Enter New Growth Percentage: </label>
+  <label for="growth-input">Enter Forecasted Growth Percentage: </label>
   <input type="number" id="growth-input" min="0" step="0.01" value="0.0">
-  <button onclick="updateVisualization()">Update Growth</button>
+  <button onclick="updateVisualization()">Forecast Growth</button>
 
   <script>
     function updateVisualization() {
       var growthInput = document.getElementById("growth-input");
-      var growthPercentage = parseFloat(growthInput.value);
-      var currentValue = document.getElementById("visualization");
+      var growthPercentage = parseFloat(growthInput.value) / 100;
+      var chartData = [];
 
-      // Calculate new current value based on the growth percentage
-      // You can modify this calculation based on your specific needs
+      // Update table rows and calculate growth
       var rows = document.getElementsByTagName("tbody")[0].rows;
       for (var i = 0; i < rows.length; i++) {
-        var amount = parseFloat(rows[i].cells[3].textContent);
-        var price = parseFloat(rows[i].cells[1].textContent);
-        var currentVal = amount * price * (1 + growthPercentage);
-        rows[i].cells[4].textContent = currentVal.toFixed(2);
+        var amountPurchased = parseFloat(rows[i].cells[2].textContent);
+        var priceAtPurchase = parseFloat(rows[i].cells[4].textContent);
+        var currentPrice = parseFloat(rows[i].cells[3].textContent);
+        var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
+        rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
+
+        var futureValue = amountPurchased * priceAtPurchase * (1 + growthPercentage);
+        chartData.push({
+          stockSymbol: rows[i].cells[0].textContent,
+          futureValue: futureValue.toFixed(2)
+        });
+      }
+
+      // Generate chart
+  var chartLabels = chartData.map(function (data) {
+    return data.stockSymbol;
+  });
+  var chartValues = chartData.map(function (data) {
+    return data.futureValue;
+  });
+
+  var chart = new Chart("chart", {
+    type: "bar",
+    data: {
+      labels: chartLabels,
+      datasets: [{
+        label: "Future Value",
+        data: chartValues,
+        backgroundColor: "rgba(54, 162, 235, 0.5)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
       }
     }
+  });
+}
 
-    // Initial visualization update
-    updateVisualization();
-  </script>
-</body>
-
-</html>
+// Initial visualization update
+updateVisualization();
