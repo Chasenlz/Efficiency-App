@@ -85,64 +85,60 @@
   </table>
 
   <h2>Visualization</h2>
-  <canvas id="chart"></canvas>
-
-  <h2>Change Growth Percentage</h2>
-  <label for="growth-input">Enter Forecasted Growth Percentage: </label>
-  <input type="number" id="growth-input" min="0" step="0.01" value="0.0">
-  <button onclick="updateVisualization()">Forecast Growth</button>
-
   <script>
-    function updateVisualization() {
-      var growthInput = document.getElementById("growth-input");
-      var growthPercentage = parseFloat(growthInput.value) / 100;
-      var chartData = [];
+  function updateVisualization() {
+    var growthInput = document.getElementById("growth-input");
+    var growthPercentage = parseFloat(growthInput.value) / 100;
+    var chartData = [];
 
-      // Update table rows and calculate growth
-      var rows = document.getElementsByTagName("tbody")[0].rows;
-      for (var i = 0; i < rows.length; i++) {
-        var amountPurchased = parseFloat(rows[i].cells[2].textContent);
-        var priceAtPurchase = parseFloat(rows[i].cells[4].textContent);
-        var currentPrice = parseFloat(rows[i].cells[3].textContent);
-        var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
-        rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
+    // Update table rows and calculate growth
+    var rows = document.getElementsByTagName("tbody")[0].rows;
+    for (var i = 0; i < rows.length; i++) {
+      var amountPurchased = parseFloat(rows[i].cells[2].textContent);
+      var priceAtPurchase = parseFloat(rows[i].cells[4].textContent);
+      var currentPrice = parseFloat(rows[i].cells[3].textContent);
+      var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
+      rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
 
-        var futureValue = amountPurchased * priceAtPurchase * (1 + growthPercentage);
-        chartData.push({
-          stockSymbol: rows[i].cells[0].textContent,
-          futureValue: futureValue.toFixed(2)
-        });
-      }
+      var futureValue = amountPurchased * priceAtPurchase * (1 + growthPercentage);
+      chartData.push({
+        stockSymbol: rows[i].cells[0].textContent,
+        futureValue: futureValue.toFixed(2)
+      });
+    }
 
-      // Generate chart
-  var chartLabels = chartData.map(function (data) {
-    return data.stockSymbol;
-  });
-  var chartValues = chartData.map(function (data) {
-    return data.futureValue;
-  });
+    // Generate chart
+    var chartLabels = chartData.map(function (data) {
+      return data.stockSymbol;
+    });
+    var chartValues = chartData.map(function (data) {
+      return data.futureValue;
+    });
 
-  var chart = new Chart("chart", {
-    type: "bar",
-    data: {
-      labels: chartLabels,
-      datasets: [{
-        label: "Future Value",
-        data: chartValues,
-        backgroundColor: "rgba(54, 162, 235, 0.5)",
-        borderColor: "rgba(54, 162, 235, 1)",
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+    var chart = new Chart("chart", {
+      type: "bar",
+      data: {
+        labels: chartLabels,
+        datasets: [{
+          label: "Future Value",
+          data: chartValues,
+          backgroundColor: "rgba(54, 162, 235, 0.5)",
+          borderColor: "rgba(54, 162, 235, 1)",
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
         }
       }
-    }
-  });
-}
+    });
+  }
 
-// Initial visualization update
-updateVisualization();
+  // Initial visualization update
+  updateVisualization();
+</script>
+
+
