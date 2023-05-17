@@ -1,9 +1,9 @@
 // API key for Alpha Vantage
-const apiKey = "YOUR_API_KEY";
+const apiKey = "R7ZJHMGHCNL0STMX";
 
 // Function to fetch stock data from Alpha Vantage API
 async function fetchStockData(symbol) {
-  const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
+  const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${symbol}&apikey=${R7ZJHMGHCNL0STMX}`;
 
   try {
     const response = await fetch(apiUrl);
