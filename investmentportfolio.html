@@ -2,19 +2,93 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stock Data Visualization</title>
-  <!-- Include the Chart.js library -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Portfolio</title>
+
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    input[type="number"] {
+      width: 80px;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="chartContainer">
-    <canvas id="stockChart"></canvas>
+  <h1>Investment Portfolio</h1>
+
+  <h2>Stocks</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Stock Symbol</th>
+        <th>Price</th>
+        <th>Time of Purchase</th>
+        <th>Amount</th>
+        <th>Current Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>BCRX</td>
+        <td>100</td>
+        <td>2022-01-01</td>
+        <td>10</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td>SDGR</td>
+        <td>200</td>
+        <td>2022-02-01</td>
+        <td>5</td>
+        <td>1000</td>
+      </tr>
+      <!-- Add more rows for other stocks -->
+    </tbody>
+  </table>
+
+  <h2>Visualization</h2>
+  <div id="visualization">
+    <!-- Visualization will be dynamically updated -->
   </div>
 
-  <script src="script.js"></script>
+  <h2>Change Growth Percentage</h2>
+  <label for="growth-input">Enter New Growth Percentage: </label>
+  <input type="number" id="growth-input" min="0" step="0.01" value="0.0">
+  <button onclick="updateVisualization()">Update Growth</button>
+
+  <script>
+    function updateVisualization() {
+      var growthInput = document.getElementById("growth-input");
+      var growthPercentage = parseFloat(growthInput.value);
+      var currentValue = document.getElementById("visualization");
+
+      // Calculate new current value based on the growth percentage
+      // You can modify this calculation based on your specific needs
+      var rows = document.getElementsByTagName("tbody")[0].rows;
+      for (var i = 0; i < rows.length; i++) {
+        var amount = parseFloat(rows[i].cells[3].textContent);
+        var price = parseFloat(rows[i].cells[1].textContent);
+        var currentVal = amount * price * (1 + growthPercentage);
+        rows[i].cells[4].textContent = currentVal.toFixed(2);
+      }
+    }
+
+    // Initial visualization update
+    updateVisualization();
+  </script>
 </body>
 
 </html>
+
