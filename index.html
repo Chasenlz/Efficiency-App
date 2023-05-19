@@ -14,7 +14,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
   <style>
-      body {
+    body {
       background-color: black;
       color: white;
     }
@@ -58,7 +58,7 @@
     .tabs .tab a.active {
       background-color: blue;
     }
-    
+
     .section {
       padding: 30px 0;
     }
@@ -66,7 +66,18 @@
     .section h3 {
       color: #fff;
     }
-   </style>
+
+    /* Add scrollable class to the container of each tab */
+    .scrollable {
+      height: 600px;
+      overflow-y: scroll;
+    }
+
+    /* Remove height from the iframes to allow natural scrolling */
+    .scrollable iframe {
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -77,103 +88,107 @@
       </div>
     </nav>
   </header>
-<main>
-  <div class="row">
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab"><a href="#about">About Me</a></li>
-        <li class="tab"><a href="#investment">Investments</a></li>
-        <li class="tab"><a href="#marketing">Marketing</a></li>
-        <li class="tab"><a href="#resume">Resume</a></li>
-        <li class="tab"><a href="#portfolio">Personal Portfolio</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <section id="about" class="section">
-  <div class="container">
+  <main>
     <div class="row">
-      <div class="col s12 m4">
-        <img src="Me Simple.png" alt="Me" class="responsive-img">
-      </div>
-      <div class="col s12 m8">
-        <h3>About Me</h3>
-        <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
-        <p>Feel free to contact me:</p>
-        <ul>
-          <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon icon-img">Email</a></li>
-          <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon icon-img">LinkedIn</a></li>
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab"><a href="#about">About Me</a></li>
+          <li class="tab"><a href="#investment">Investments</a></li>
+          <li class="tab"><a href="#marketing">Marketing</a></li>
+          <li class="tab"><a href="#resume">Resume</a></li>
+          <li class="tab"><a href="#portfolio">Personal Portfolio</a></li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
 
-<style>
-  .icon-img {
-    width: 32px;
-    height: 32px;
-  }
-</style>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m4">
+            <img src="Me Simple.png" alt="Me" class="responsive-img">
+          </div>
+          <div class="col s12 m8">
+            <h3>About Me</h3>
+            <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+            <p>Feel free to contact me:</p>
+            <ul>
+              <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon icon-img">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon icon-img">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="investment" class="section white-text">
-  <div class="container">
-    <iframe src="investmentportfolio.html" style="width: 100%; height: 600px; border: none;"></iframe>
-  </div>
-</section>
-  
- <section id="marketing" class="section white-text">
-  <div class="container">
-   <iframe src="marketing.html" style="width: 100%; height: 600px; border: none;"></iframe>
-  </div>
-</section>
+    <style>
+      .icon-img {
+        width: 32px;
+        height: 32px;
+      }
+    </style>
 
-<section id="resume" class="section white-text">
-  <div class="container">
-    <iframe src="resume.html" style="width: 100%; height: 600px; border: none;"></iframe>
-  </div>
-</section>
+    <section id="investment" class="section white-text">
+      <div class="container scrollable">
+        <iframe src="investmentportfolio.html" style="width: 100%; border: none;"></iframe>
+      </div>
+    </section>
 
-<section id="portfolio" class="section white-text">
-  <div class="container">
-    <iframe src="pportfolio.html" style="width: 100%; height: 600px; border: none;"></iframe>
-  </div>
-</section>
+    <section id="marketing" class="section white-text">
+      <div class="container scrollable">
+        <iframe src="marketing.html" style="width: 100%; border: none;"></iframe>
+      </div>
+    </section>
 
+    <section id="resume" class="section white-text">
+      <div class="container scrollable">
+        <iframe src="resume.html" style="width: 100%; border: none;"></iframe>
+      </div>
+    </section>
 
-<!-- Materialize - Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- Initialize tabs -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var tabElems = document.querySelectorAll(".tabs");
-    M.Tabs.init(tabElems);
-
-    var fabElem = document.querySelectorAll(".fixed-action-btn");
-    M.FloatingActionButton.init(fabElem, {
-      direction: "left",
-      hoverEnabled: false
-    });
-  });
-</script>
+    <section id="portfolio" class="section white-text">
+      <div class="container scrollable">
+        <iframe src="pportfolio.html" style="width: 100%; border: none;"></iframe>
+      </div>
+    </section>
 
 
-<!-- Materialize - Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Initialize tabs -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tabElems = document.querySelectorAll(".tabs");
+        M.Tabs.init(tabElems);
 
-<!-- Initialize tabs and scrollspy -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var tabElems = document.querySelectorAll(".tabs");
-    M.Tabs.init(tabElems);
+        var fabElem = document.querySelectorAll(".fixed-action-btn");
+        M.FloatingActionButton.init(fabElem, {
+          direction: "left",
+          hoverEnabled: false
+        });
+      });
+    </script>
 
-    var scrollspyElems = document.querySelectorAll(".scrollspy");
-    M.ScrollSpy.init(scrollspyElems);
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    var fabElem = document.querySelectorAll(".fixed-action-btn");
-    M.FloatingActionButton.init(fabElem, {
-      direction: "left",
-      hoverEnabled: false
-    });
-  });
-</script>
+    <!-- Initialize tabs and scrollspy -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var tabElems = document.querySelectorAll(".tabs");
+        M.Tabs.init(tabElems);
+
+        var scrollspyElems = document.querySelectorAll(".scrollspy");
+        M.ScrollSpy.init(scrollspyElems);
+
+        var fabElem = document.querySelectorAll(".fixed-action-btn");
+        M.FloatingActionButton.init(fabElem, {
+          direction: "left",
+          hoverEnabled: false
+        });
+      });
+    </script>
+  </main>
+</body>
+
+</html>
+
