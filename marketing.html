@@ -22,7 +22,7 @@
     }
 
     .scrollable {
-      max-height: 600px; /* Adjust the max-height value to match index.html */
+      max-height: 600px;
       overflow-y: scroll;
     }
 
@@ -42,6 +42,7 @@
       background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       background-color: rgba(255, 255, 255, 0.1);
+      color: #000;
     }
 
     .item img {
@@ -73,35 +74,50 @@
 </head>
 
 <body>
-  <h1>Marketing Portfolio</h1>
-
-  <div class="scrollable">
-    <div class="container">
-      <div class="item">
-        <img src="invezo-logo.png" alt="Invezo Logo">
-        <h2>Invezo</h2>
-        <p>Invezo is a mobile application that provides social media information such as sentiment in conjunction with stocks on the NASDAQ and a select few of crypto tokens. 
-        I created this digital advertisement to promote brand awareness and increase users, this one of the first ads ran in the FOMO campaign. An effective ad campaign to gain new users and increase brand awareness.</p>
-        <a href="https://www.invezo.com/" class="btn" target="_blank">Visit Website</a>
+  <header>
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="#" class="brand-logo center">Marketing Portfolio</a>
       </div>
+    </nav>
+  </header>
 
-      <div class="item" style="text-align: right;">
-        <img src="starke-marketing.png" alt="Starke Marketing Logo">
-        <h2>Starke Marketing</h2>
-        <p>This was one of my first clients, Wolper, when I started working at Starke Marketing. I was tasked with finding Wolper's target audience, building a client persona, and coming up with a concept campaign.
-        I created this as part of my concept campaign. "The new power suit." The one dress shirt for all occasions, fits for you but designed for your partner because when you look better, you perform better. 
-        The target audience was younger men, men who could afford a nice dress shirt but this wasn't just meant for work, it was for dates, cocktail parties, a weekend get-away. Older men always want to be younger, so target the youth and you will get the entire audience.</p>
-        <a href="https://wearestarke.com/" class="btn" target="_blank">Visit Website</a>
-      </div>
+  <main>
+    <div class="scrollable">
+      <div class="container">
+        <div class="item">
+          <img src="invezo-logo.png" alt="Invezo Logo">
+          <h2>Invezo</h2>
+          <p>Invezo is a mobile application that provides social media information such as sentiment in conjunction with stocks on the NASDAQ and a select few of crypto tokens. 
+          I created this digital advertisement to promote brand awareness and increase users, this one of the first ads ran in the FOMO campaign. An effective ad campaign to gain new users and increase brand awareness.</p>
+          <a href="https://www.invezo.com/" class="btn" target="_blank">Visit Website</a>
+        </div>
 
-      <div class="item">
-        <img src="bridge-agency-logo.png" alt="Bridge Agency Logo">
-        <h2>The Bridge Agency</h2>
-        <p>The Bridge Agency is a recruitment / talent agency specializing in fashion. This was some freelance work I did for the Bridge Agency, giving the client the tools to develop and run their own campaign by creating the bones for a social media campaign to get people to use the Bridge Agency services.</p>
-        <a href="https://www.thebridgeagents.com/about" class="btn" target="_blank">Visit Website</a>
+        <div class="item" style="text-align: right;">
+          <img src="starke-marketing.png" alt="Starke Marketing Logo">
+          <h2>Starke Marketing</h2>
+          <p>This was one of my first clients, Wolper, when I started working at Starke Marketing. I was tasked with finding Wolper's target audience, building a client persona, and coming up with a concept campaign.
+          I created this as part of my concept campaign. "The new power suit." The one dress shirt for all occasions, fits for you but designed for your partner because when you look better, you perform better. 
+          The target audience was younger men, men who could afford a nice dress shirt but this wasn't just meant for work, it was for dates, cocktail parties, a weekend get-away. Older men always want to be younger, so target the youth and you will get the entire audience.</p>
+          <a href="https://wearestarke.com/" class="btn" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="item">
+          <img src="bridge-agency-logo.png" alt="Bridge Agency Logo">
+          <h2>The Bridge Agency</h2>
+          <p>The Bridge Agency is a recruitment / talent agency specializing in fashion. This was some freelance work I did for the Bridge Agency, giving the client the tools to develop and run their own campaign by creating the bones for a social media campaign to get people to use the Bridge Agency services.</p>
+          <a href="https://www.thebridgeagents.com/about" class="btn" target="_blank">Visit Website</a>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelectorAll(".scrollspy");
+      M.ScrollSpy.init(elems);
+    });
+  </script>
 </body>
 
 </html>
