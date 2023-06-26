@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Sidebar</title>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>
+        <nav>
+            <div class="sidebar-top">
+              <span class="expand-btn">
+                <img src="assets/chevron.svg" alt="Chevron">
+              </span>
+              <img
+                src="assets/logo.svg"
+                class="logo"
+                alt="Laplace Logo"
+              >
+              <h3 class="hide">Laplace</h3>
+            </div>
 
-  <title>My Portfolio</title>
-
-  <!-- Materialize - Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="nav-wrapper blue">
-        <a href="#" class="brand-logo center">My Portfolio</a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab"><a href="#about">About Me</a></li>
+           <li class="tab"><a href="#about">About Me</a></li>
           <li class="tab"><a href="#investment">Investments</a></li>
           <li class="tab"><a href="#marketing">Marketing</a></li>
           <li class="tab"><a href="#resume">Resume</a></li>
           <li class="tab"><a href="#portfolio">Personal Portfolio</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <section id="about" class="section">
+          
+            <div class="sidebar-links">
+              <ul>
+                <li>
+                  <a href="#about" class="active" title="About Me">
+                    <div class="icon">
+                      <img src="assets/aboutme.svg" title="About Me Icon">
+                    </div>
+                    <span class="link hide">About Me</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#analytics" title="Investments">
+                    <div class="icon">
+                        <img src="assets/investment.svg" title="Investment Icon">
+                    </div>
+                    <span class="link hide">Investments</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#marketing" title="Marketing">
+                    <div class="icon">
+                        <img src="assets/marketing.svg" title="Marketing Icon">
+                    </div>
+                    <span class="link hide">Marketing</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#reports" title="Resume">
+                    <div class="icon">
+                        <img src="assets/resume.svg" title="Reports Icon">
+                    </div>
+                    <span class="link hide">Resume</span>
+                  </a>
+                </li>
+                 <li>
+                  <a href="#reports" title="Personal Portfolio">
+                    <div class="icon">
+                        <img src="assets/pp.svg" title="Persoanl Portfolio Icon">
+                    </div>
+                    <span class="link hide">Personal Portfolio</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <script src="script.js"></script>
+    </body>
+  
+<section id="about" class="section">
       <div class="container">
         <div class="row">
           <div class="col s12 m4">
@@ -55,57 +94,13 @@
       </div>
     </section>
 
-    <style>
-      .icon-img {
-        width: 32px;
-        height: 32px;
-      }
-    </style>
+  <!-- Materialize - Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <section id="investment" class="section white-text">
-      <div class="container scrollable">
-        <iframe src="investmentportfolio.html" style="width: 100%; border: none;"></iframe>
-      </div>
-    </section>
-
-    <section id="marketing" class="section white-text">
-      <div class="container scrollable">
-        <iframe src="marketing.html" style="width: 100%; border: none;"></iframe>
-      </div>
-    </section>
-
-    <section id="resume" class="section white-text">
-      <div class="container scrollable">
-        <iframe src="resume.html" style="width: 100%; border: none;"></iframe>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section white-text">
-      <div class="container scrollable">
-        <iframe src="pportfolio.html" style="width: 100%; border: none;"></iframe>
-      </div>
-    </section>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
 
 
-    <!-- Materialize - Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Initialize tabs and scrollspy -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var tabElems = document.querySelectorAll(".tabs");
-        M.Tabs.init(tabElems);
+    
 
-        var scrollspyElems = document.querySelectorAll(".scrollspy");
-        M.ScrollSpy.init(scrollspyElems);
-
-        var fabElem = document.querySelectorAll(".fixed-action-btn");
-        M.FloatingActionButton.init(fabElem, {
-          direction: "left",
-          hoverEnabled: false
-        });
-      });
-    </script>
-  </main>
-</body>
-
-</html>
