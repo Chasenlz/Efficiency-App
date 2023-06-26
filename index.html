@@ -1,98 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html>
-    <header>
-        <title>Sidebar</title>
-        <link rel="stylesheet" href="style.css">
-    </header>
-    <body>
-        <nav>
-            <div class="sidebar-top">
-              <span class="expand-btn">
-                <img src="assets/chevron.svg" alt="Chevron">
-              </span>
-              <img
-                src="assets/logo.svg"
-                class="logo"
-                alt="Laplace Logo"
-              >
-              <h3 class="hide">Laplace</h3>
-            </div>
-
-           <li class="tab"><a href="#about">About Me</a></li>
-          <li class="tab"><a href="#investment">Investments</a></li>
-          <li class="tab"><a href="#marketing">Marketing</a></li>
-          <li class="tab"><a href="#resume">Resume</a></li>
-          <li class="tab"><a href="#portfolio">Personal Portfolio</a></li>
-          
-            <div class="sidebar-links">
-              <ul>
-                <li>
-                  <a href="#about" class="active" title="About Me">
-                    <div class="icon">
-                      <img src="assets/aboutme.svg" title="About Me Icon">
-                    </div>
-                    <span class="link hide">About Me</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#analytics" title="Investments">
-                    <div class="icon">
-                        <img src="assets/investment.svg" title="Investment Icon">
-                    </div>
-                    <span class="link hide">Investments</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#marketing" title="Marketing">
-                    <div class="icon">
-                        <img src="assets/marketing.svg" title="Marketing Icon">
-                    </div>
-                    <span class="link hide">Marketing</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#reports" title="Resume">
-                    <div class="icon">
-                        <img src="assets/resume.svg" title="Reports Icon">
-                    </div>
-                    <span class="link hide">Resume</span>
-                  </a>
-                </li>
-                 <li>
-                  <a href="#reports" title="Personal Portfolio">
-                    <div class="icon">
-                        <img src="assets/pp.svg" title="Persoanl Portfolio Icon">
-                    </div>
-                    <span class="link hide">Personal Portfolio</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <script src="script.js"></script>
-    </body>
-  
-<section id="about" class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m4">
-            <img src="Me Simple.png" alt="Me" class="responsive-img">
-          </div>
-          <div class="col s12 m8">
-            <h3>About Me</h3>
-            <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
-            <p>Feel free to contact me:</p>
-            <ul>
-              <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon icon-img">Email</a></li>
-              <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon icon-img">LinkedIn</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<head>
+  <title>Sidebar</title>
+  <link rel="stylesheet" href="style.css">
 
   <!-- Materialize - Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -101,6 +12,89 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+<body>
+  <nav>
+    <div class="sidebar-top">
+      <span class="expand-btn">
+        <img src="assets/chevron.svg" alt="Chevron">
+      </span>
+      <img src="assets/logo.svg" class="logo" alt="Laplace Logo">
+      <h3 class="hide">Laplace</h3>
+    </div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="#about" class="active" title="About Me">
+            <div class="icon">
+              <img src="assets/aboutme.svg" title="About Me Icon">
+            </div>
+            <span class="link hide">About Me</span>
+          </a>
+        </li>
+        <li>
+          <a href="#investment" title="Investments">
+            <div class="icon">
+              <img src="assets/investment.svg" title="Investment Icon">
+            </div>
+            <span class="link hide">Investments</span>
+          </a>
+        </li>
+        <li>
+          <a href="#marketing" title="Marketing">
+            <div class="icon">
+              <img src="assets/marketing.svg" title="Marketing Icon">
+            </div>
+            <span class="link hide">Marketing</span>
+          </a>
+        </li>
+        <li>
+          <a href="#resume" title="Resume">
+            <div class="icon">
+              <img src="assets/resume.svg" title="Reports Icon">
+            </div>
+            <span class="link hide">Resume</span>
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" title="Personal Portfolio">
+            <div class="icon">
+              <img src="assets/pp.svg" title="Personal Portfolio Icon">
+            </div>
+            <span class="link hide">Personal Portfolio</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <img src="Me Simple.png" alt="Me" class="responsive-img">
+        </div>
+        <div class="col s12 m8">
+          <h3>About Me</h3>
+          <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+          <p>Feel free to contact me:</p>
+          <ul>
+            <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon icon-img">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon icon-img">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Materialize - Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Initialize scrollspy -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var scrollspyElems = document.querySelectorAll(".scrollspy");
+      M.ScrollSpy.init(scrollspyElems);
+    });
+  </script>
+</body>
+
+</html>
