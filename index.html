@@ -9,7 +9,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .sidebar-links ul li a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+      padding: 8px 16px;
+    }
+
+    .sidebar-links ul li a:hover span.link {
+      white-space: normal;
+      overflow: visible;
+    }
+  </style>
 </head>
 
 <body>
