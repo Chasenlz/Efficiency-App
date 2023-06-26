@@ -27,16 +27,113 @@
       white-space: normal;
       overflow: visible;
     }
+
+    /* Additional Custom Styles */
+    #logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 54px;
+      height: 54px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 18rem;
+      height: 100vh;
+      background-color: var(--primary-color);
+      padding: 1.8rem 0.85rem;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      transition: width 0.5s ease-in-out;
+    }
+
+    .sidebar:hover {
+      width: 250px;
+    }
+
+    .sidebar .sidebar-links {
+      margin-top: 2rem;
+    }
+
+    .sidebar .sidebar-links ul {
+      list-style-type: none;
+    }
+
+    .sidebar .sidebar-links li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar .sidebar-links li a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .sidebar .sidebar-links li a:hover {
+      background-color: var(--secondary-color);
+      border-radius: 10px;
+    }
+
+    .sidebar .sidebar-links .icon {
+      margin-right: 0.5rem;
+    }
+
+    #chevron {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      background-color: var(--secondary-color);
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px -3px var(--secondary-color);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .sidebar:hover #chevron {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #about {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    #about .col.m4 {
+      width: 30%;
+    }
+
+    #about .col.m8 {
+      width: 70%;
+    }
+
+    #about img {
+      width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
-  <nav>
+  <nav class="sidebar">
     <div class="sidebar-top">
-      <span class="expand-btn">
+      <span id="chevron">
         <img src="assets/chevron.svg" alt="Chevron">
       </span>
-      <img src="assets/logo.jpg" class="logo" alt="Laplace Logo">
+      <img src="assets/logo.jpg" id="logo" alt="Laplace Logo">
       <h3 class="hide">Laplace</h3>
     </div>
     <div class="sidebar-links">
@@ -88,9 +185,6 @@
   <section id="about" class="section">
     <div class="container">
       <div class="row">
-        <div class="col s12 m4">
-          <img src="Me Simple.png" alt="Me" class="responsive-img">
-        </div>
         <div class="col s12 m8">
           <h3>About Me</h3>
           <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
@@ -99,6 +193,9 @@
             <li><a href="mailto:chasenlz410@gmail.com.com"><img src="email-icon.png" alt="Email" class="contact-icon icon-img">Email</a></li>
             <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon icon-img">LinkedIn</a></li>
           </ul>
+        </div>
+        <div class="col s12 m4">
+          <img src="Me Simple.png" alt="Me" class="responsive-img">
         </div>
       </div>
     </div>
