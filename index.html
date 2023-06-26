@@ -13,71 +13,6 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      background-color: black;
-      color: white;
-    }
-
-    .section {
-      padding: 30px 0;
-    }
-
-    .fixed-action-btn {
-      bottom: 40px;
-      right: 40px;
-    }
-
-    .fixed-action-btn .btn-floating {
-      background-color: blue;
-    }
-
-    .fixed-action-btn .btn-floating i {
-      color: white;
-    }
-
-    .fixed-action-btn ul li a.btn-floating {
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-      border-radius: 50%;
-    }
-
-    .fixed-action-btn ul li a i {
-      font-size: 32px;
-    }
-
-    .tabs .tab a {
-      color: black;
-    }
-
-    .tabs .tab a:hover {
-      background-color: blue;
-    }
-
-    .tabs .tab a.active {
-      background-color: blue;
-    }
-
-    .section {
-      padding: 30px 0;
-    }
-
-    .section h3 {
-      color: #fff;
-    }
-
-    /* Add scrollable class to the container of each tab */
-    .scrollable {
-      height: 100vh;
-      overflow-y: scroll;
-    }
-
-    /* Remove height from the iframes to allow natural scrolling */
-    .scrollable iframe {
-      height: 100%;
-    }
-  </style>
 </head>
 
 <body>
@@ -154,23 +89,6 @@
 
     <!-- Materialize - Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Initialize tabs -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var tabElems = document.querySelectorAll(".tabs");
-        M.Tabs.init(tabElems);
-
-        var fabElem = document.querySelectorAll(".fixed-action-btn");
-        M.FloatingActionButton.init(fabElem, {
-          direction: "left",
-          hoverEnabled: false
-        });
-      });
-    </script>
-
-    <!-- Materialize - Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <!-- Initialize tabs and scrollspy -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
