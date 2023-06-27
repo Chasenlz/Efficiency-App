@@ -112,30 +112,24 @@
       color: var(--text-color);
     }
 
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    .container {
-      margin-top: 0;
-      padding-top: 0;
-    }
-
-    .container .row {
-      margin-top: 0;
-      padding-top: 0;
+    #content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: var(--primary-color);
     }
 
-    .col.m4 {
+    #content .col.m4 {
       width: 30%;
     }
 
-    .col.m8 {
+    #content .col.m8 {
       width: 70%;
     }
 
-    img {
+    #content img {
       width: 100%;
       height: auto;
       border: none;
@@ -199,39 +193,39 @@
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col m4">
-        <img src="Me Simple.png" alt="Me" class="responsive-img">
-      </div>
-      <div class="col m8">
-        <h3 style="color: white;">About Me</h3>
-        <p style="color: white;">Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
-        <p style="color: white;">Feel free to contact me:</p>
-        <ul>
-          <li>
-            <a href="mailto:chasenlz410@gmail.com" class="contact">
-              <div class="contact-icon-container">
-                <img src="email-icon.png" alt="Email" class="contact-icon">
-              </div>
-              <span class="link">Email</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
-              <div class="contact-icon-container">
-                <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
-              </div>
-              <span class="link">LinkedIn</span>
-            </a>
-          </li>
-        </ul>
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col m4">
+          <img src="Me Simple.png" alt="Me" class="responsive-img">
+        </div>
+        <div class="col m8">
+          <h3 style="color: white;">About Me</h3>
+          <p style="color: white;">Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+          <p style="color: white;">Feel free to contact me:</p>
+          <ul>
+            <li>
+              <a href="mailto:chasenlz410@gmail.com" class="contact">
+                <div class="contact-icon-container">
+                  <img src="email-icon.png" alt="Email" class="contact-icon">
+                </div>
+                <span class="link">Email</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
+                <div class="contact-icon-container">
+                  <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+                </div>
+                <span class="link">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  </body>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script.js"></script>
-
-
+</body>
 </html>
