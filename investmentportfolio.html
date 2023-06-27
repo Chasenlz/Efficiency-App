@@ -30,7 +30,7 @@
     .sidebar {
       position: sticky;
       top: 0;
-      width: 50%;
+      width: 6rem;
       height: 100vh;
       background-color: var(--secondary-color);
       padding: 1.8rem 1.5rem;
@@ -143,8 +143,60 @@
 <body>
   <div class="container">
     <nav class="sidebar">
-      <h2>Visualization</h2>
-      <canvas id="chart"></canvas>
+      <div class="sidebar-links">
+        <ul>
+          <li>
+            <a href="index.html" class="active" title="About Me">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">About Me</span>
+            </a>
+          </li>
+          <li>
+            <a href="investmentportfolio.html" title="Investments">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/investments.svg" alt="Investments" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Investments</span>
+            </a>
+          </li>
+          <li>
+            <a href="marketing.html" title="Marketing">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Marketing</span>
+            </a>
+          </li>
+          <li>
+            <a href="resume.html" title="Resume">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/resume.svg" alt="Resume" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Resume</span>
+            </a>
+          </li>
+          <li>
+            <a href="pportfolio.html" title="Personal Portfolio">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Personal Portfolio</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="content">
@@ -203,6 +255,11 @@
           <!-- Add more rows for other stocks -->
         </tbody>
       </table>
+    </div>
+
+    <div class="sidebar">
+      <h2>Visualization</h2>
+      <canvas id="chart"></canvas>
     </div>
   </div>
 
@@ -305,4 +362,3 @@
 </body>
 
 </html>
-
