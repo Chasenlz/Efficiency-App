@@ -15,10 +15,14 @@
       height: 36px;
     }
 
+    .container {
+      display: flex;
+    }
+
     .sidebar {
       position: sticky;
       top: 0;
-      width: 6rem;
+      width: 50%;
       height: 100vh;
       background-color: var(--secondary-color);
       padding: 1.8rem 1.5rem;
@@ -73,6 +77,13 @@
     .sidebar .sidebar-links li a:hover span.link {
       justify-content: flex-start;
       padding-left: 0.5rem;
+    }
+
+    .content {
+      flex: 1;
+      padding: 1rem;
+      color: var(--text-color);
+      background-color: var(--primary-color);
     }
 
     body {
@@ -133,13 +144,6 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="nav-wrapper blue">
-        <a href="#" class="brand-logo center">Marketing Portfolio</a>
-      </div>
-    </nav>
-  </header>
   <div id="content">
     <div class="sidebar">
       <div class="sidebar-links">
@@ -197,7 +201,9 @@
         </ul>
       </div>
     </div>
-    <div class="section">
+
+    <div id="personal portfolio" class="section">
+      <div class="container">
       <h2 class="section-heading">Extracurricular Activities</h2>
       <div class="section-content">
         <div class="loading-wheel"></div>
@@ -206,6 +212,7 @@
     </div>
 
     <div class="section">
+      <div class="container">
       <h2 class="section-heading">Past Projects</h2>
       <div class="section-content">
         <div class="loading-wheel"></div>
@@ -214,6 +221,7 @@
     </div>
 
     <div class="section">
+      <div class="container">
       <h2 class="section-heading">This is what I mean when I say I resold shoes</h2>
       <div class="section-content">
         <div class="media-container">
