@@ -23,6 +23,10 @@
       height: 36px;
     }
 
+    .container {
+      display: flex;
+    }
+
     .sidebar {
       position: sticky;
       top: 0;
@@ -83,7 +87,9 @@
       padding-left: 0.5rem;
     }
 
-    body {
+    .content {
+      flex: 1;
+      padding: 1rem;
       color: var(--text-color);
       background-color: var(--primary-color);
     }
@@ -135,7 +141,7 @@
 </head>
 
 <body>
-  <div id="content">
+  <div class="container">
     <nav class="sidebar">
       <div class="sidebar-links">
         <ul>
@@ -193,162 +199,166 @@
       </div>
     </nav>
 
-    <h1>Investment Portfolio</h1>
+    <div class="content">
+      <h1>Investment Portfolio</h1>
 
-    <h2>Stocks</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Stock Symbol</th>
-          <th>Time of Purchase</th>
-          <th>Amount Purchased</th>
-          <th>Price at Purchase</th>
-          <th>Current Price</th>
-          <th>Growth</th>
-          <th>Total Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>BCRX</td>
-          <td>2020-04-15</td>
-          <td contenteditable="true" oninput="updateVisualization()">114</td>
-          <td>2.63</td>
-          <td contenteditable="true" oninput="updateVisualization()">8.56</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>SDGR</td>
-          <td>2020-03-17</td>
-          <td contenteditable="true" oninput="updateVisualization()">5</td>
-          <td>30.41</td>
-          <td contenteditable="true" oninput="updateVisualization()">27.62</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>TCEHY</td>
-          <td>2020-03-17</td>
-          <td contenteditable="true" oninput="updateVisualization()">5</td>
-          <td>22.99</td>
-          <td contenteditable="true" oninput="updateVisualization()">44.64</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>SHOP</td>
-          <td>2020-04-07</td>
-          <td contenteditable="true" oninput="updateVisualization()">40</td>
-          <td>35.57</td>
-          <td contenteditable="true" oninput="updateVisualization()">60.40</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <!-- Add more rows for other stocks -->
-      </tbody>
-    </table>
-    
-    <h2>Visualization</h2>
-    <canvas id="chart"></canvas>
+      <h2>Stocks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Stock Symbol</th>
+            <th>Time of Purchase</th>
+            <th>Amount Purchased</th>
+            <th>Price at Purchase</th>
+            <th>Current Price</th>
+            <th>Growth</th>
+            <th>Total Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BCRX</td>
+            <td>2020-04-15</td>
+            <td contenteditable="true" oninput="updateVisualization()">114</td>
+            <td>2.63</td>
+            <td contenteditable="true" oninput="updateVisualization()">8.56</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SDGR</td>
+            <td>2020-03-17</td>
+            <td contenteditable="true" oninput="updateVisualization()">5</td>
+            <td>30.41</td>
+            <td contenteditable="true" oninput="updateVisualization()">27.62</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>TCEHY</td>
+            <td>2020-03-17</td>
+            <td contenteditable="true" oninput="updateVisualization()">5</td>
+            <td>22.99</td>
+            <td contenteditable="true" oninput="updateVisualization()">44.64</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>SHOP</td>
+            <td>2020-04-07</td>
+            <td contenteditable="true" oninput="updateVisualization()">40</td>
+            <td>35.57</td>
+            <td contenteditable="true" oninput="updateVisualization()">60.40</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- Add more rows for other stocks -->
+        </tbody>
+      </table>
+    </div>
 
-    <script>
-      var chart;
+    <div class="sidebar">
+      <h2>Visualization</h2>
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
 
-      function updateVisualization() {
-        var chartData = [];
-        var startDate = new Date("2020-03-01"); // Start date for x-axis
+  <script>
+    var chart;
 
-        // Update table rows and calculate growth and total value
-        var rows = document.getElementsByTagName("tbody")[0].rows;
-        for (var i = 0; i < rows.length; i++) {
-          var stockSymbol = rows[i].cells[0].textContent;
-          var timeOfPurchase = new Date(rows[i].cells[1].textContent);
-          var amountPurchased = parseFloat(rows[i].cells[2].textContent);
-          var priceAtPurchase = parseFloat(rows[i].cells[3].textContent);
-          var currentPrice = parseFloat(rows[i].cells[4].textContent);
-          var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
-          rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
+    function updateVisualization() {
+      var chartData = [];
+      var startDate = new Date("2020-03-01"); // Start date for x-axis
 
-          var totalValue = amountPurchased * currentPrice;
-          rows[i].cells[6].textContent = totalValue.toFixed(2);
+      // Update table rows and calculate growth and total value
+      var rows = document.getElementsByTagName("tbody")[0].rows;
+      for (var i = 0; i < rows.length; i++) {
+        var stockSymbol = rows[i].cells[0].textContent;
+        var timeOfPurchase = new Date(rows[i].cells[1].textContent);
+        var amountPurchased = parseFloat(rows[i].cells[2].textContent);
+        var priceAtPurchase = parseFloat(rows[i].cells[3].textContent);
+        var currentPrice = parseFloat(rows[i].cells[4].textContent);
+        var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
+        rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
 
-          var currentDate = new Date();
-          var daysDiff = Math.ceil((currentDate - startDate) / (1000 * 60 * 60 * 24)); // Convert to days
-          var futureValue = amountPurchased * priceAtPurchase * Math.pow(1 + growth, daysDiff / 365);
-          chartData.push({
-            stockSymbol: stockSymbol,
-            futureValue: futureValue.toFixed(2),
-            totalValue: totalValue.toFixed(2),
-            daysDiff: daysDiff
-          });
-        }
+        var totalValue = amountPurchased * currentPrice;
+        rows[i].cells[6].textContent = totalValue.toFixed(2);
 
-        // Generate chart
-        var chartLabels = Array.from({ length: 365 }, (_, i) => {
-          var date = new Date(startDate);
-          date.setDate(date.getDate() + i);
-          return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+        var currentDate = new Date();
+        var daysDiff = Math.ceil((currentDate - startDate) / (1000 * 60 * 60 * 24)); // Convert to days
+        var futureValue = amountPurchased * priceAtPurchase * Math.pow(1 + growth, daysDiff / 365);
+        chartData.push({
+          stockSymbol: stockSymbol,
+          futureValue: futureValue.toFixed(2),
+          totalValue: totalValue.toFixed(2),
+          daysDiff: daysDiff
         });
-        var datasets = [];
-        for (var i = 0; i < chartData.length; i++) {
-          datasets.push({
-            label: chartData[i].stockSymbol,
-            data: Array.from({ length: chartData[i].daysDiff }, (_, j) => chartData[i].futureValue),
-            borderColor: getRandomColor(),
-            borderWidth: 1
-          });
-        }
+      }
 
-        if (chart) {
-          chart.data.labels = chartLabels;
-          chart.data.datasets = datasets;
-          chart.update();
-        } else {
-          chart = new Chart("chart", {
-            type: "line",
-            data: {
-              labels: chartLabels,
-              datasets: datasets
-            },
-            options: {
-              scales: {
-                x: {
-                  display: true,
-                  title: {
-                    display: true,
-                    text: 'Time'
+      // Generate chart
+      var chartLabels = Array.from({ length: 365 }, (_, i) => {
+        var date = new Date(startDate);
+        date.setDate(date.getDate() + i);
+        return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+      });
+      var datasets = [];
+      for (var i = 0; i < chartData.length; i++) {
+        datasets.push({
+          label: chartData[i].stockSymbol,
+          data: Array.from({ length: chartData[i].daysDiff }, (_, j) => chartData[i].futureValue),
+          borderColor: getRandomColor(),
+          borderWidth: 1
+        });
+      }
+
+      if (chart) {
+        chart.data.labels = chartLabels;
+        chart.data.datasets = datasets;
+        chart.update();
+      } else {
+        chart = new Chart("chart", {
+          type: "line",
+          data: {
+            labels: chartLabels,
+            datasets: datasets
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  callback: function (value, index, values) {
+                    return "$" + value;
                   }
-                },
-                y: {
-                  display: true,
-                  title: {
-                    display: true,
-                    text: 'Dollars'
-                  },
-                  suggestedMin: 0
                 }
               }
+            },
+            plugins: {
+              title: {
+                display: true,
+                text: "Investment Growth"
+              },
+              legend: {
+                display: true,
+                position: "bottom"
+              }
             }
-          });
-        }
+          }
+        });
       }
+    }
 
-      // Generate a random color for chart line
-      function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
       }
+      return color;
+    }
 
-      updateVisualization();
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>  
-  </div>
+    updateVisualization();
+  </script>
 </body>
 
 </html>
