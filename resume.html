@@ -13,11 +13,102 @@
 
   <!-- Custom Styles -->
   <style>
-    .section {
-      padding: 30px 0;
+    :root {
+      --primary-color: #0e0d1c;
+      --secondary-color: #6c5cee;
+      --tertiary-color: #7cbbe4;
+      --text-color: #f6f6f6;
     }
-  </style>
-  <style>
+
+    .contact-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 18rem;
+      height: 100vh;
+      background-color: var(--primary-color);
+      padding: 1.8rem 0.85rem;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      transition: width 0.5s ease-in-out;
+    }
+
+    .sidebar:hover {
+      width: 200px;
+    }
+
+    .sidebar .sidebar-links {
+      margin-top: 2rem;
+    }
+
+    .sidebar .sidebar-links ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar .sidebar-links li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar .sidebar-links li a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .sidebar .sidebar-links li a:hover {
+      background-color: var(--secondary-color);
+      border-radius: 10px;
+    }
+
+    .sidebar .sidebar-links .icon {
+      margin-right: 0.5rem;
+    }
+
+    .sidebar:hover .sidebar-links li a {
+      justify-content: flex-end;
+      padding-right: 0.5rem;
+    }
+
+    .sidebar:hover .sidebar-links li a:hover span.link {
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+
+    #about {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: var(--tertiary-color);
+    }
+
+    #about .col.m4 {
+      width: 30%;
+    }
+
+    #about .col.m8 {
+      width: 70%;
+    }
+
+    #about img {
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--tertiary-color);
+    }
+    
+    /* Existing styles */
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -96,14 +187,14 @@
               <li>Utilized a comprehensive energy toolset, Tableau for data visualization, and NetSuite for financial analysis, to evaluate and communicate the benefits of renewable energy, such as Direct Pay and Investment Tax Credit (ITC) incentives.</li>
               <li>Conducted thorough investment diligence for large-scale transmission-connected energy assets, employing advanced modeling techniques in Excel and Python to assess their financial viability and project returns in the renewable power sector.</li>
               <li>Applied sophisticated modeling techniques, utilizing Python, R, and SAS, to analyze the market applications of energy storage, optimizing storage utilization through simulated market dispatch and enhancing project profitability.</li>
-              <li>•	Leveraged practical experience from a power trading desk to provide valuable insights into real-time operations, including power flow modeling and demonstrated proficiency in data manipulation, analysis, and visualization using Python, Excel, and potentially Tableau.</li>
+              <li>Leveraged practical experience from a power trading desk to provide valuable insights into real-time operations, including power flow modeling and demonstrated proficiency in data manipulation, analysis, and visualization using Python, Excel, and potentially Tableau.</li>
             </ul>
           </div>
           <div class="card-action">
             <span>Jan 2023 - May 2023 | Remote</span>
           </div>
         </div>
-        
+
         <div class="card">
           <div class="card-content">
             <span class="card-title">Starke Marketing</span>
@@ -175,7 +266,7 @@
           Programming: Python, R, SQL, Java, SAS<br>
           Data visualization: Tableau, Power BI, Google Data Studio<br>
           Computer: Microsoft PowerPoint, Excel, Word, QuickBooks, Bloomberg, Adobe Photoshop and Illustrator<br>
-          Leadership: Alpha Epilson Pi Member / House Manager, SMU Club Golf VP
+          Leadership: Alpha Epsilon Pi Member / House Manager, SMU Club Golf VP
         </p>
       </div>
     </section>
@@ -193,3 +284,4 @@
 </body>
 
 </html>
+
