@@ -75,15 +75,15 @@
       justify-content: flex-start;
       padding-left: 0.5rem;
     }
-    
+
     .contact-icon-container {
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.5rem;
-}
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+    }
 
     .contact {
       display: flex;
@@ -127,6 +127,23 @@
       width: 100%;
       height: auto;
       border: none;
+    }
+
+    /* Modified styles */
+    #content h3 {
+      color: white;
+    }
+
+    .sidebar .sidebar-links li a .link {
+      display: none;
+    }
+
+    .sidebar .sidebar-links li a:hover .link {
+      display: inline;
+    }
+
+    .sidebar .sidebar-links li a:hover span.link {
+      padding-left: 5px;
     }
   </style>
 </head>
@@ -188,26 +205,26 @@
           </div>
           <div class="col m8">
             <h3>About Me</h3>
-            <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+            <p style="color: white;">Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
             <p>Feel free to contact me:</p>
-           <ul>
-  <li>
-    <a href="mailto:chasenlz410@gmail.com" class="contact">
-      <div class="contact-icon-container">
-        <img src="email-icon.png" alt="Email" class="contact-icon">
-      </div>
-      <span class="link">Email</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
-      <div class="contact-icon-container">
-        <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
-      </div>
-      <span class="link">LinkedIn</span>
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="mailto:chasenlz410@gmail.com" class="contact">
+                  <div class="contact-icon-container">
+                    <img src="email-icon.png" alt="Email" class="contact-icon">
+                  </div>
+                  <span class="link">Email</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
+                  <div class="contact-icon-container">
+                    <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+                  </div>
+                  <span class="link">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
