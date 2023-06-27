@@ -137,18 +137,44 @@
       height: auto;
       border: none;
     }
+    
+    body {
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .section {
+      flex: 1;
+    }
+
+    .sidebar {
+      z-index: 1;
+    }
+
+    #marketing {
+      padding: 2rem;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+
+    .content {
+      display: flex;
+    }
+
+    .col.m4 {
+      width: 30%;
+    }
+
+    .col.m8 {
+      width: 70%;
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="nav-wrapper blue">
-        <a href="#" class="brand-logo center">Marketing Portfolio</a>
-      </div>
-    </nav>
-  </header>
-
   <div class="container">
     <nav class="sidebar">
       <div class="sidebar-links">
@@ -252,3 +278,4 @@
 </body>
 
 </html>
+
