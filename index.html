@@ -25,7 +25,6 @@
     .sidebar {
       position: sticky;
       top: 0;
-      left: 0;
       width: 18rem;
       height: 100vh;
       background-color: var(--primary-color);
@@ -102,7 +101,7 @@
       display: none;
     }
 
-    #about {
+    #content {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -111,15 +110,15 @@
       background-color: var(--tertiary-color);
     }
 
-    #about .col.m4 {
+    #content .col.m4 {
       width: 30%;
     }
 
-    #about .col.m8 {
+    #content .col.m8 {
       width: 70%;
     }
 
-    #about img {
+    #content img {
       width: 100%;
       height: auto;
       border: 4px solid var(--tertiary-color);
@@ -128,66 +127,68 @@
 </head>
 
 <body>
-  <section id="about" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m4">
-          <img src="Me Simple.png" alt="Me" class="responsive-img">
-        </div>
-        <div class="col s12 m8">
-          <h3>About Me</h3>
-          <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
-          <p>Feel free to contact me:</p>
-          <ul>
-            <li><a href="mailto:chasenlz410@gmail.com"><img src="email-icon.png" alt="Email" class="contact-icon"></a></li>
-            <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon"></a></li>
-          </ul>
+  <div id="content">
+    <nav class="sidebar">
+      <div class="sidebar-links">
+        <ul>
+          <li>
+            <a href="index.html" class="active" title="About Me">
+              <div class="icon">
+                <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="investmentportfolio.html" title="Investments">
+              <div class="icon">
+                <img src="assets/investments.svg" alt="Investments" class="contact-icon">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="marketing.html" title="Marketing">
+              <div class="icon">
+                <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="resume.html" title="Resume">
+              <div class="icon">
+                <img src="assets/resume.svg" alt="Resume" class="contact-icon">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="pportfolio.html" title="Personal Portfolio">
+              <div class="icon">
+                <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col m4">
+            <img src="Me Simple.png" alt="Me" class="responsive-img">
+          </div>
+          <div class="col m8">
+            <h3>About Me</h3>
+            <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+            <p>Feel free to contact me:</p>
+            <ul>
+              <li><a href="mailto:chasenlz410@gmail.com"><img src="email-icon.png" alt="Email" class="contact-icon"></a></li>
+              <li><a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <nav class="sidebar">
-    <div class="sidebar-links">
-      <ul>
-        <li>
-          <a href="index.html" class="active" title="About Me">
-            <div class="icon">
-              <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="investmentportfolio.html" title="Investments">
-            <div class="icon">
-              <img src="assets/investments.svg" alt="Investments" class="contact-icon">
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="marketing.html" title="Marketing">
-            <div class="icon">
-              <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="resume.html" title="Resume">
-            <div class="icon">
-              <img src="assets/resume.svg" alt="Resume" class="contact-icon">
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="pportfolio.html" title="Personal Portfolio">
-            <div class="icon">
-              <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    </section>
+  </div>
 
   <!-- Materialize - Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
