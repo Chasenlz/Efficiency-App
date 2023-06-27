@@ -25,26 +25,27 @@
       height: 16px;
     }
 
-    .sidebar {
+     .sidebar {
       position: sticky;
       top: 0;
-      left: 0;
-      width: 18rem;
+      width: 6rem;
       height: 100vh;
-      background-color: var(--primary-color);
-      padding: 1.8rem 0.85rem;
-      color: var(--text-color);
+      background-color: var(--secondary-color);
+      padding: 1.8rem 1.5rem;
+      color: var(--secondary-color);
       display: flex;
       flex-direction: column;
       transition: width 0.5s ease-in-out;
+      overflow: hidden;
     }
 
     .sidebar:hover {
-      width: 200px;
+      width: 400px;
+      color: var(--text-color);
     }
 
     .sidebar .sidebar-links {
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
 
     .sidebar .sidebar-links ul {
@@ -54,7 +55,7 @@
     }
 
     .sidebar .sidebar-links li {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .sidebar .sidebar-links li a {
@@ -63,25 +64,25 @@
       text-decoration: none;
       color: var(--text-color);
       transition: all 0.3s ease;
+      padding: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .sidebar .sidebar-links li a:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--primary-color);
       border-radius: 10px;
+      white-space: initial;
     }
 
     .sidebar .sidebar-links .icon {
       margin-right: 0.5rem;
     }
 
-    .sidebar:hover .sidebar-links li a {
-      justify-content: flex-end;
-      padding-right: 0.5rem;
-    }
-
-    .sidebar:hover .sidebar-links li a:hover span.link {
+    .sidebar .sidebar-links li a:hover span.link {
       justify-content: flex-start;
-      padding-left: 1rem;
+      padding-left: 0.5rem;
     }
 
     #about {
