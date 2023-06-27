@@ -15,14 +15,10 @@
       height: 36px;
     }
 
-    .container {
-      display: flex;
-    }
-
     .sidebar {
       position: sticky;
       top: 0;
-      width: 50%;
+      width: 6rem;
       height: 100vh;
       background-color: var(--secondary-color);
       padding: 1.8rem 1.5rem;
@@ -30,7 +26,7 @@
       display: flex;
       flex-direction: column;
       transition: width 0.5s ease-in-out;
-      overflow: hidden;
+      overflow: hidden; /* Add this line */
     }
 
     .sidebar:hover {
@@ -54,20 +50,20 @@
 
     .sidebar .sidebar-links li a {
       display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.3s ease;
-      padding: 0.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    white-space: nowrap; /* Add this line */
+    overflow: hidden; /* Add this line */
+    text-overflow: ellipsis; /* Add this line */
     }
 
     .sidebar .sidebar-links li a:hover {
       background-color: var(--primary-color);
       border-radius: 10px;
-      white-space: initial;
+      white-space: initial; /* Add this line */
     }
 
     .sidebar .sidebar-links .icon {
@@ -77,6 +73,38 @@
     .sidebar .sidebar-links li a:hover span.link {
       justify-content: flex-start;
       padding-left: 0.5rem;
+    }
+    
+    .contact-icon-container {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+      padding: 4px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    .contact .contact-icon {
+      width: 36px;
+      height: 36px;
+      margin-right: 0.5rem;
+    }
+
+    .contact:hover span.link {
+      color: var(--text-color);
+    }
+
+    .contact span.link {
+      display: none;
+      color: var(--text-color);
     }
 
     .content {
