@@ -27,6 +27,37 @@
       white-space: normal;
       overflow: visible;
     }
+    #chevron {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px -3px var(--secondary-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.sidebar:hover #chevron {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+}
 
     /* Additional Custom Styles */
     #logo {
