@@ -10,61 +10,150 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Custom Styles -->
-  <style>
-    body {
-      color: white;
-    }
+ <style>
+  :root {
+    --primary-color: #0e0d1c;
+    --secondary-color: #6c5cee;
+    --tertiary-color: #7cbbe4;
+    --text-color: #f6f6f6;
+  }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+  .contact-icon {
+    width: 16px;
+    height: 16px;
+  }
 
-    th,
-    td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 18rem;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 1.8rem 0.85rem;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.5s ease-in-out;
+  }
 
-    input[type="number"] {
-      width: 80px;
-    }
+  .sidebar:hover {
+    width: 200px;
+  }
 
-    /* Styling for editable fields */
-    [contenteditable="true"] {
-      outline: none;
-      background-color: #f2f2f2;
-      color: blue;
-    }
+  .sidebar .sidebar-links {
+    margin-top: 2rem;
+  }
 
-    :root {
-      --primary-color: #0e0d1c;
-      --secondary-color: #6c5cee;
-      --tertiary-color: #7cbbe4;
-    }
+  .sidebar .sidebar-links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+  .sidebar .sidebar-links li {
+    margin-bottom: 1rem;
+  }
 
-    h1 {
-      color: var(--secondary-color);
-    }
+  .sidebar .sidebar-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
 
-    h2 {
-      color: var(--tertiary-color);
-    }
+  .sidebar .sidebar-links li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+  }
 
-    #chart {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px 0;
-    }
-  </style>
+  .sidebar .sidebar-links .icon {
+    margin-right: 0.5rem;
+  }
+
+  .sidebar:hover .sidebar-links li a {
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+  }
+
+  .sidebar:hover .sidebar-links li a:hover span.link {
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  #about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--tertiary-color);
+  }
+
+  #about .col.m4 {
+    width: 30%;
+  }
+
+  #about .col.m8 {
+    width: 70%;
+  }
+
+  #about img {
+    width: 100%;
+    height: auto;
+    border: 4px solid var(--tertiary-color);
+  }
+
+  body {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
+  input[type="number"] {
+    width: 80px;
+  }
+
+  /* Styling for editable fields */
+  [contenteditable="true"] {
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    color: var(--secondary-color);
+  }
+
+  h2 {
+    color: var(--tertiary-color);
+  }
+
+  #chart {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+  }
+</style>
 </head>
 
 <body>
