@@ -19,16 +19,20 @@
       --tertiary-color: #7cbbe4;
       --text-color: #f6f6f6;
     }
-    
+
     .contact-icon {
       width: 36px;
       height: 36px;
     }
 
+    .container {
+      display: flex;
+    }
+
     .sidebar {
       position: sticky;
       top: 0;
-      width: 6rem;
+      width: 50%;
       height: 100vh;
       background-color: var(--secondary-color);
       padding: 1.8rem 1.5rem;
@@ -45,7 +49,7 @@
     }
 
     .sidebar .sidebar-links {
-      margin-top: 6rem;
+      margin-top: 4rem;
     }
 
     .sidebar .sidebar-links ul {
@@ -85,10 +89,12 @@
       padding-left: 0.5rem;
     }
 
-    #content {
-      display: flex;
+    .content {
+      flex: 1;
+      padding: 1rem;
+      color: var(--text-color);
+      background-color: var(--primary-color);
     }
-
     .main-content {
       flex: 1;
       padding-left: 2rem;
