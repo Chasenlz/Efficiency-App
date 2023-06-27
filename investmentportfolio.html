@@ -9,6 +9,7 @@
   <!-- Chart.js library -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <!-- Custom Styles -->
   <style>
     body {
       color: white;
@@ -29,12 +30,39 @@
     input[type="number"] {
       width: 80px;
     }
-    
+
     /* Styling for editable fields */
     [contenteditable="true"] {
       outline: none;
       background-color: #f2f2f2;
       color: blue;
+    }
+
+    :root {
+      --primary-color: #0e0d1c;
+      --secondary-color: #6c5cee;
+      --tertiary-color: #7cbbe4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: var(--secondary-color);
+    }
+
+    h2 {
+      color: var(--tertiary-color);
+    }
+
+    #chart {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px 0;
     }
   </style>
 </head>
@@ -74,7 +102,7 @@
         <td></td>
         <td></td>
       </tr>
-       <tr>
+      <tr>
         <td>TCEHY</td>
         <td>2020-03-17</td>
         <td contenteditable="true" oninput="updateVisualization()">5</td>
@@ -83,7 +111,7 @@
         <td></td>
         <td></td>
       </tr>
-       <tr>
+      <tr>
         <td>SHOP</td>
         <td>2020-04-07</td>
         <td contenteditable="true" oninput="updateVisualization()">40</td>
