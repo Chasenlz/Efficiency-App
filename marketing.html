@@ -2,125 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Marketing Portfolio</title>
-  <!-- Materialize - Compiled and minified CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Custom Styles -->
   <style>
-    :root {
-      --primary-color: #0e0d1c;
-      --secondary-color: #6c5cee;
-      --tertiary-color: #7cbbe4;
-      --text-color: #f6f6f6;
-    }
-
-    .contact-icon {
-      width: 36px;
-      height: 36px;
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 0;
-      width: 6rem;
-      height: 100vh;
-      background-color: var(--secondary-color);
-      padding: 1.8rem 1.5rem;
-      color: var(--secondary-color);
-      display: flex;
-      flex-direction: column;
-      transition: width 0.5s ease-in-out;
-      overflow: hidden;
-    }
-
-    .sidebar:hover {
-      width: 400px;
-      color: var(--text-color);
-    }
-
-    .sidebar .sidebar-links {
-      margin-top: 4rem;
-    }
-
-    .sidebar .sidebar-links ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sidebar .sidebar-links li {
-      margin-bottom: 2rem;
-    }
-
-    .sidebar .sidebar-links li a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.3s ease;
-      padding: 0.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .sidebar .sidebar-links li a:hover {
-      background-color: var(--primary-color);
-      border-radius: 10px;
-      white-space: initial;
-    }
-
-    .sidebar .sidebar-links .icon {
-      margin-right: 0.5rem;
-    }
-
-    .sidebar .sidebar-links li a:hover span.link {
-      justify-content: flex-start;
-      padding-left: 0.5rem;
-    }
-    
-    .contact-icon-container {
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 0.5rem;
-      padding: 4px;
-    }
-
-    .contact {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem;
-    }
-
-    .contact .contact-icon {
-      width: 36px;
-      height: 36px;
-      margin-right: 0.5rem;
-    }
-
-    .contact:hover span.link {
-      color: var(--text-color);
-    }
-
-    .contact span.link {
-      display: none;
-      color: var(--text-color);
-    }
-
-    body {
-      margin: 0;
-    }
+    /* CSS styling here */
 
     .container {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #f5f5f5;
+      padding: 1rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar a:hover {
+      color: #666;
+    }
+
+    .sidebar .icon {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+
+    .sidebar .link {
+      font-size: 1rem;
     }
 
     .section {
@@ -151,8 +81,8 @@
     }
 
     #content img {
-      width: 100%;
-      height: auto;
+      width: 45px;
+      height: 45px;
       border: none;
     }
   </style>
@@ -204,34 +134,32 @@
             </a>
           </li>
           <li>
-            <a href="pportfolio.html" title="Personal Portfolio">
+            <a href="contact.html" title="Contact">
               <div class="icon">
                 <div class="contact-icon-container">
-                  <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
+                  <img src="assets/contact.svg" alt="Contact" class="contact-icon">
                 </div>
               </div>
-              <span class="link">Personal Portfolio</span>
+              <span class="link">Contact</span>
             </a>
           </li>
         </ul>
       </div>
     </nav>
-
-    <section id="marketing" class="section">
+    <section class="section">
       <div class="content">
-        <div class="row">
-          <div class="col m4">
-            <div class="item">
-              <img src="invezo-logo.png" alt="Invezo Logo">
-              <h2>Invezo</h2>
-              <p>Invezo is a mobile application that provides social media information such as sentiment in conjunction with stocks on the NASDAQ and a select few of crypto tokens.</p>
-              <p>I created this digital advertisement to promote brand awareness and increase users, this one of the first ads ran in the FOMO campaign. An effective ad campaign to gain new users and increase brand awareness.</p>
-              <a href="https://www.invezo.com/" class="btn" target="_blank">Visit Website</a>
-            </div>
+        <div class="col m8" id="content">
+          <div class="item">
+            <img src="metrix-logo.png" alt="Metrix Marketing Logo" width="45" height="45">
+            <h2>Metrix Marketing</h2>
+            <p>This is an example of a client project I worked on during my time at Metrix Marketing.</p>
+            <p>The goal of the campaign was to increase brand awareness and drive engagement for the client's new product launch. I developed a comprehensive digital marketing strategy, including social media advertising, influencer partnerships, and targeted email marketing.</p>
+            <p>The campaign resulted in a significant increase in website traffic and product sales, exceeding the client's expectations.</p>
+            <a href="https://www.metrixmarketing.com/" class="btn" target="_blank">Visit Website</a>
           </div>
           <div class="col m4">
             <div class="item" style="text-align: right;">
-              <img src="starke-marketing.png" alt="Starke Marketing Logo">
+              <img src="starke-marketing.png" alt="Starke Marketing Logo" width="45" height="45">
               <h2>Starke Marketing</h2>
               <p>This was one of my first clients, Wolper, when I started working at Starke Marketing.</p>
               <p>I was tasked with finding Wolper's target audience, building a client persona, and coming up with a concept campaign.</p>
@@ -242,7 +170,7 @@
           </div>
           <div class="col m4">
             <div class="item">
-              <img src="bridge-agency-logo.png" alt="Bridge Agency Logo">
+              <img src="bridge-agency-logo.png" alt="Bridge Agency Logo" width="45" height="45">
               <h2>The Bridge Agency</h2>
               <p>The Bridge Agency is a recruitment / talent agency specializing in fashion.</p>
               <p>This was some freelance work I did for the Bridge Agency, giving the client the tools to develop and run their own campaign by creating the bones for a social media campaign to get people to use the Bridge Agency services.</p>
@@ -253,10 +181,6 @@
       </div>
     </section>
   </div>
-
-  <!-- Materialize - Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
