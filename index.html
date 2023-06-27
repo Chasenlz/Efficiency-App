@@ -28,7 +28,7 @@
       width: 18rem;
       height: 100vh;
       background-color: var(--secondary-color);
-      padding: 1.8rem 0.85rem;
+      padding: 1.8rem 1.5rem;
       color: var(--text-color);
       display: flex;
       flex-direction: column;
@@ -36,7 +36,7 @@
     }
 
     .sidebar:hover {
-      width: 200px;
+      width: 300px;
     }
 
     .sidebar .sidebar-links {
@@ -75,6 +75,15 @@
       justify-content: flex-start;
       padding-left: 0.5rem;
     }
+    
+    .contact-icon-container {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
 
     .contact {
       display: flex;
@@ -181,20 +190,24 @@
             <h3>About Me</h3>
             <p>Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
             <p>Feel free to contact me:</p>
-            <ul>
-              <li>
-                <a href="mailto:chasenlz410@gmail.com" class="contact">
-                  <img src="email-icon.png" alt="Email" class="contact-icon">
-                  <span class="link">Email</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
-                  <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
-                  <span class="link">LinkedIn</span>
-                </a>
-              </li>
-            </ul>
+           <ul>
+  <li>
+    <a href="mailto:chasenlz410@gmail.com" class="contact">
+      <div class="contact-icon-container">
+        <img src="email-icon.png" alt="Email" class="contact-icon">
+      </div>
+      <span class="link">Email</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
+      <div class="contact-icon-container">
+        <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+      </div>
+      <span class="link">LinkedIn</span>
+    </a>
+  </li>
+</ul>
           </div>
         </div>
       </div>
