@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Chase Lazarian's Website</title>
   <link rel="stylesheet" href="style.css">
-
   <!-- Materialize - Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
   <!-- Custom Styles -->
   <style>
     :root {
@@ -25,6 +22,7 @@
     .sidebar {
       position: sticky;
       top: 0;
+      left: 0;
       width: 6rem;
       height: 100vh;
       background-color: var(--secondary-color);
@@ -57,14 +55,14 @@
 
     .sidebar .sidebar-links li a {
       display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    padding: 0.5rem;
-    white-space: nowrap; /* Add this line */
-    overflow: hidden; /* Add this line */
-    text-overflow: ellipsis; /* Add this line */
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      white-space: nowrap; /* Add this line */
+      overflow: hidden; /* Add this line */
+      text-overflow: ellipsis; /* Add this line */
     }
 
     .sidebar .sidebar-links li a:hover {
@@ -138,101 +136,326 @@
     }
   </style>
 </head>
-
 <body>
-  <div id="content">
-    <nav class="sidebar">
-      <div class="sidebar-links">
-        <ul>
-          <li>
-            <a href="index.html" class="active" title="About Me">
-              <div class="icon">
-                <div class="contact-icon-container">
-                  <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
-                </div>
+  <nav class="sidebar">
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="index.html" class="active" title="About Me">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
               </div>
-              <span class="link">About Me</span>
-            </a>
-          </li>
-          <li>
-            <a href="investmentportfolio.html" title="Investments">
-              <div class="icon">
-                <div class="contact-icon-container">
-                  <img src="assets/investments.svg" alt="Investments" class="contact-icon">
-                </div>
+            </div>
+            <span class="link">About Me</span>
+          </a>
+        </li>
+        <li>
+          <a href="investmentportfolio.html" title="Investments">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/investments.svg" alt="Investments" class="contact-icon">
               </div>
-              <span class="link">Investments</span>
-            </a>
-          </li>
-          <li>
-            <a href="marketing.html" title="Marketing">
-              <div class="icon">
-                <div class="contact-icon-container">
-                  <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
-                </div>
+            </div>
+            <span class="link">Investments</span>
+          </a>
+        </li>
+        <li>
+          <a href="marketing.html" title="Marketing">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
               </div>
-              <span class="link">Marketing</span>
-            </a>
-          </li>
-          <li>
-            <a href="resume.html" title="Resume">
-              <div class="icon">
-                <div class="contact-icon-container">
-                  <img src="assets/resume.svg" alt="Resume" class="contact-icon">
-                </div>
+            </div>
+            <span class="link">Marketing</span>
+          </a>
+        </li>
+        <li>
+          <a href="resume.html" title="Resume">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/resume.svg" alt="Resume" class="contact-icon">
               </div>
-              <span class="link">Resume</span>
-            </a>
-          </li>
-          <li>
-            <a href="pportfolio.html" title="Personal Portfolio">
-              <div class="icon">
-                <div class="contact-icon-container">
-                  <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
-                </div>
+            </div>
+            <span class="link">Resume</span>
+          </a>
+        </li>
+        <li>
+          <a href="pportfolio.html" title="Personal Portfolio">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
               </div>
-              <span class="link">Personal Portfolio</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <section id="about" class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col m4">
-            <img src="Me Simple.png" alt="Me" class="responsive-img">
-          </div>
-          <div class="col m8">
-            <h3 style="color: white;">About Me</h3>
-            <p style="color: white;">Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
-            <p style="color: white;">Feel free to contact me:</p>
-            <ul>
-              <li>
-                <a href="mailto:chasenlz410@gmail.com" class="contact">
-                  <div class="contact-icon-container">
-                    <img src="email-icon.png" alt="Email" class="contact-icon">
-                  </div>
-                  <span class="link">Email</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
-                  <div class="contact-icon-container">
-                    <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
-                  </div>
-                  <span class="link">LinkedIn</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+            </div>
+            <span class="link">Personal Portfolio</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col m4">
+          <img src="Me Simple.png" alt="Me" class="responsive-img">
+        </div>
+        <div class="col m8">
+          <h3 style="color: white;">About Me</h3>
+          <p style="color: white;">Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+          <p style="color: white;">Feel free to contact me:</p>
+          <ul>
+            <li>
+              <a href="mailto:chasenlz410@gmail.com" class="contact">
+                <div class="contact-icon-container">
+                  <img src="email-icon.png" alt="Email" class="contact-icon">
+                </div>
+                <span class="link">Email</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
+                <div class="contact-icon-container">
+                  <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+                </div>
+                <span class="link">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script.js"></script>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chase Lazarian's Website</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Materialize - Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --primary-color: #0e0d1c;
+      --secondary-color: #6c5cee;
+      --tertiary-color: #7cbbe4;
+      --text-color: #f6f6f6;
+    }
 
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 6rem;
+      height: 100vh;
+      background-color: var(--secondary-color);
+      padding: 0rem 1.5rem;
+      color: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      transition: width 0.5s ease-in-out;
+      overflow: hidden; /* Add this line */
+    }
+
+    .sidebar:hover {
+      width: 400px;
+      color: var(--text-color);
+    }
+
+    .sidebar .sidebar-links {
+      margin-top: 4rem;
+    }
+
+    .sidebar .sidebar-links ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar .sidebar-links li {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar .sidebar-links li a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      white-space: nowrap; /* Add this line */
+      overflow: hidden; /* Add this line */
+      text-overflow: ellipsis; /* Add this line */
+    }
+
+    .sidebar .sidebar-links li a:hover {
+      background-color: var(--primary-color);
+      border-radius: 10px;
+      white-space: initial; /* Add this line */
+    }
+
+    .sidebar .sidebar-links .icon {
+      margin-right: 0.5rem;
+    }
+
+    .sidebar .sidebar-links li a:hover span.link {
+      justify-content: flex-start;
+      padding-left: 0.5rem;
+    }
+    
+    .contact-icon-container {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+      padding: 4px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    .contact .contact-icon {
+      width: 36px;
+      height: 36px;
+      margin-right: 0.5rem;
+    }
+
+    .contact:hover span.link {
+      color: var(--text-color);
+    }
+
+    .contact span.link {
+      display: none;
+      color: var(--text-color);
+    }
+
+    #content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: var(--primary-color);
+    }
+
+    #content .col.m4 {
+      width: 30%;
+    }
+
+    #content .col.m8 {
+      width: 70%;
+    }
+
+    #content img {
+      width: 100%;
+      height: auto;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="index.html" class="active" title="About Me">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
+              </div>
+            </div>
+            <span class="link">About Me</span>
+          </a>
+        </li>
+        <li>
+          <a href="investmentportfolio.html" title="Investments">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/investments.svg" alt="Investments" class="contact-icon">
+              </div>
+            </div>
+            <span class="link">Investments</span>
+          </a>
+        </li>
+        <li>
+          <a href="marketing.html" title="Marketing">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
+              </div>
+            </div>
+            <span class="link">Marketing</span>
+          </a>
+        </li>
+        <li>
+          <a href="resume.html" title="Resume">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/resume.svg" alt="Resume" class="contact-icon">
+              </div>
+            </div>
+            <span class="link">Resume</span>
+          </a>
+        </li>
+        <li>
+          <a href="pportfolio.html" title="Personal Portfolio">
+            <div class="icon">
+              <div class="contact-icon-container">
+                <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
+              </div>
+            </div>
+            <span class="link">Personal Portfolio</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col m4">
+          <img src="Me Simple.png" alt="Me" class="responsive-img">
+        </div>
+        <div class="col m8">
+          <h3 style="color: white;">About Me</h3>
+          <p style="color: white;">Hi there! I'm Chase Lazarian, an aspiring financial analyst with education in finance and strategic marketing. With a strong background in economics and a passion for data-driven decision-making, I bring a results-oriented approach to every project. As a Chartered Financial Analyst (CFA) Level I candidate, I stay ahead of market trends and leverage my programming skills in Python, R, SQL, Java, and SAS to drive insights. Let's connect to discuss how my quantitative analysis, strategic marketing, and data visualization skills can contribute to your organization's success.</p>
+          <p style="color: white;">Feel free to contact me:</p>
+          <ul>
+            <li>
+              <a href="mailto:chasenlz410@gmail.com" class="contact">
+                <div class="contact-icon-container">
+                  <img src="email-icon.png" alt="Email" class="contact-icon">
+                </div>
+                <span class="link">Email</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/chase-lazarian-926836195/" target="_blank" class="contact">
+                <div class="contact-icon-container">
+                  <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+                </div>
+                <span class="link">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
