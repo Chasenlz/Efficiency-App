@@ -11,112 +11,94 @@
 
   <!-- Custom Styles -->
   <style>
-    :root {
-      --primary-color: #0e0d1c;
-      --secondary-color: #6c5cee;
-      --tertiary-color: #7cbbe4;
-      --text-color: #f6f6f6;
-    }
+  :root {
+    --primary-color: #0e0d1c;
+    --secondary-color: #6c5cee;
+    --tertiary-color: #7cbbe4;
+    --text-color: #f6f6f6;
+  }
 
-    .contact-icon {
-      width: 36px;
-      height: 36px;
-    }
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+  }
 
-    .container {
-      display: flex;
-    }
+  .container {
+    display: flex;
+  }
 
-    .sidebar {
-      position: sticky;
-      top: 0;
-      left: 0;
-      width: 200px; /* Adjust the width as per your needs */
-      height: 100vh;
-      background-color: var(--secondary-color);
-      padding: 0;
-      color: var(--secondary-color);
-      display: flex;
-      flex-direction: column;
-      transition: width 0.5s ease-in-out;
-      overflow: hidden;
-    }
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    padding: 0rem 1.5rem;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.5s ease-in-out;
+    overflow: hidden;
+  }
 
-    .sidebar:hover {
-      width: 300px; /* Adjust the width as per your needs */
-      color: var(--text-color);
-    }
+  .sidebar:hover {
+    width: 400px;
+    color: var(--text-color);
+  }
 
-    .sidebar .sidebar-links {
-      margin-top: 4rem;
-    }
+  .sidebar .sidebar-links {
+    margin-top: 4rem;
+  }
 
-    .sidebar .sidebar-links ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      padding-left: 0; /* Remove default left padding */
-    }
+  .sidebar .sidebar-links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .sidebar .sidebar-links li {
-      margin-bottom: 2rem;
-    }
+  .sidebar .sidebar-links li {
+    margin-bottom: 2rem;
+  }
 
-    .sidebar .sidebar-links li a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.3s ease;
-      padding: 0.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+  .sidebar .sidebar-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .sidebar .sidebar-links li a:hover {
-      background-color: var(--primary-color);
-      border-radius: 10px;
-      white-space: initial;
-    }
+  .sidebar .sidebar-links li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    white-space: initial;
+  }
 
-    .sidebar .sidebar-links .icon {
-      margin-right: 0.5rem;
-    }
+  .sidebar .sidebar-links .icon {
+    margin-right: 0.5rem;
+  }
 
-    .sidebar .sidebar-links li a:hover span.link {
-      justify-content: flex-start;
-      padding-left: 0.5rem;
-    }
+  .sidebar .sidebar-links li a:hover span.link {
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+  }
 
-    .content {
-      flex: 1;
-      padding: 0rem;
-      color: var(--text-color);
-      background-color: var(--primary-color);
-    }
+  .content {
+    flex: 1;
+    padding: 0rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+  }
 
-    .main-content {
-      flex: 1;
-      padding-left: 2rem;
-    }
-
-    /* Existing styles */
-
-    main {
-      margin-top: 20px;
-      padding: 20px;
-      display: flex; /* Added for flex layout */
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .card {
-      margin-bottom: 20px;
-    }
-  </style>
+  .main-content {
+    flex: 1;
+    padding-left: 2rem;
+  }
 </head>
 
 
