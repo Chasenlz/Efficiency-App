@@ -8,8 +8,8 @@
   <!-- Materialize - Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<style>
-  :root {
+  <style>
+    :root {
       --primary-color: #0e0d1c;
       --secondary-color: #6c5cee;
       --tertiary-color: #7cbbe4;
@@ -136,6 +136,38 @@
       height: auto;
       border: none;
     }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .triangle-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .triangle-container .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    .triangle-container .col {
+      width: 30%;
+      margin-bottom: 2rem;
+    }
+
+    .triangle-container img {
+      width: 100%;
+      height: auto;
+      border: none;
+    }
   </style>
 </head>
 
@@ -198,20 +230,21 @@
       </div>
     </nav>
     <section id="about" class="section">
-      <div class="container">
+      <div class="triangle-container">
         <div class="row">
           <div class="col m4">
-          <div class="item" style="text-align: bottom;">
-            <img src="metrix-logo.png" alt="Metrix Marketing Logo" width="75" height="75">
-            <h2>Metrix Marketing</h2>
-            <p>This is an example of a client project I worked on during my time at Metrix Marketing.</p>
-            <p>The goal of the campaign was to increase brand awareness and drive engagement for the client's new product launch. I developed a comprehensive digital marketing strategy, including social media advertising, influencer partnerships, and targeted email marketing.</p>
-            <p>The campaign resulted in a significant increase in website traffic and product sales, exceeding the client's expectations.</p>
-            <a href="https://www.metrixmarketing.com/" class="btn" target="_blank">Visit Website</a>
+            <div class="item" style="text-align: bottom;">
+              <img src="invezo-logo.png" alt="Invezo Logo" width="175" height="175">
+              <h2>Invezo</h2>
+              <p>This is an example of a client project I worked on during my time at Invezo</p>
+              <p>The goal of the campaign was to increase brand awareness and drive engagement for the client's new product launch. I developed a comprehensive digital marketing strategy, including social media advertising, influencer partnerships, and targeted email marketing.</p>
+              <p>The campaign resulted in a significant increase in website traffic and product sales, exceeding the client's expectations.</p>
+              <a href="https://invezo.com/" class="btn" target="_blank">Visit Website</a>
+            </div>
           </div>
           <div class="col m4">
             <div class="item" style="text-align: bottom;">
-              <img src="starke-marketing.png" alt="Starke Marketing Logo" width="75" height="75">
+              <img src="starke-marketing.png" alt="Starke Marketing Logo" width="175" height="175">
               <h2>Starke Marketing</h2>
               <p>This was one of my first clients, Wolper, when I started working at Starke Marketing.</p>
               <p>I was tasked with finding Wolper's target audience, building a client persona, and coming up with a concept campaign.</p>
@@ -222,7 +255,7 @@
           </div>
           <div class="col m4">
             <div class="item" style="text-align: bottom;">
-              <img src="bridge-agency-logo.png" alt="Bridge Agency Logo" width="75" height="75">
+              <img src="bridge-agency-logo.png" alt="Bridge Agency Logo" width="175" height="175">
               <h2>The Bridge Agency</h2>
               <p>The Bridge Agency is a recruitment / talent agency specializing in fashion.</p>
               <p>This was some freelance work I did for the Bridge Agency, giving the client the tools to develop and run their own campaign by creating the bones for a social media campaign to get people to use the Bridge Agency services.</p>
@@ -236,3 +269,4 @@
 </body>
 
 </html>
+
