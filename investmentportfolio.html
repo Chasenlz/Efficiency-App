@@ -10,306 +10,345 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Custom Styles -->
- <style>
-  :root {
-    --primary-color: #0e0d1c;
-    --secondary-color: #6c5cee;
-    --tertiary-color: #7cbbe4;
-    --text-color: #f6f6f6;
-  }
+  <style>
+    :root {
+      --primary-color: #0e0d1c;
+      --secondary-color: #6c5cee;
+      --tertiary-color: #7cbbe4;
+      --text-color: #f6f6f6;
+    }
 
-  .contact-icon {
-    width: 16px;
-    height: 16px;
-  }
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+    }
 
-  .sidebar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 18rem;
-    height: 100vh;
-    background-color: var(--primary-color);
-    padding: 1.8rem 0.85rem;
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    transition: width 0.5s ease-in-out;
-  }
+    .sidebar {
+      position: sticky;
+      top: 0;
+      width: 6rem;
+      height: 100vh;
+      background-color: var(--secondary-color);
+      padding: 1.8rem 1.5rem;
+      color: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      transition: width 0.5s ease-in-out;
+      overflow: hidden;
+    }
 
-  .sidebar:hover {
-    width: 200px;
-  }
+    .sidebar:hover {
+      width: 400px;
+      color: var(--text-color);
+    }
 
-  .sidebar .sidebar-links {
-    margin-top: 2rem;
-  }
+    .sidebar .sidebar-links {
+      margin-top: 4rem;
+    }
 
-  .sidebar .sidebar-links ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-  }
+    .sidebar .sidebar-links ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
 
-  .sidebar .sidebar-links li {
-    margin-bottom: 1rem;
-  }
+    .sidebar .sidebar-links li {
+      margin-bottom: 2rem;
+    }
 
-  .sidebar .sidebar-links li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-  }
+    .sidebar .sidebar-links li a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-  .sidebar .sidebar-links li a:hover {
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-  }
+    .sidebar .sidebar-links li a:hover {
+      background-color: var(--primary-color);
+      border-radius: 10px;
+      white-space: initial;
+    }
 
-  .sidebar .sidebar-links .icon {
-    margin-right: 0.5rem;
-  }
+    .sidebar .sidebar-links .icon {
+      margin-right: 0.5rem;
+    }
 
-  .sidebar:hover .sidebar-links li a {
-    justify-content: flex-end;
-    padding-right: 0.5rem;
-  }
+    .sidebar .sidebar-links li a:hover span.link {
+      justify-content: flex-start;
+      padding-left: 0.5rem;
+    }
 
-  .sidebar:hover .sidebar-links li a:hover span.link {
-    justify-content: flex-start;
-    padding-left: 1rem;
-  }
+    body {
+      color: var(--text-color);
+      background-color: var(--primary-color);
+    }
 
-  #about {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: var(--tertiary-color);
-  }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-  #about .col.m4 {
-    width: 30%;
-  }
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid var(--secondary-color);
+    }
 
-  #about .col.m8 {
-    width: 70%;
-  }
+    input[type="number"] {
+      width: 80px;
+    }
 
-  #about img {
-    width: 100%;
-    height: auto;
-    border: 4px solid var(--tertiary-color);
-  }
+    /* Styling for editable fields */
+    [contenteditable="true"] {
+      outline: none;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
 
-  body {
-    color: var(--text-color);
-    background-color: var(--primary-color);
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+    h1 {
+      color: var(--secondary-color);
+    }
 
-  th,
-  td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid var(--secondary-color);
-  }
+    h2 {
+      color: var(--tertiary-color);
+    }
 
-  input[type="number"] {
-    width: 80px;
-  }
-
-  /* Styling for editable fields */
-  [contenteditable="true"] {
-    outline: none;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  h1 {
-    color: var(--secondary-color);
-  }
-
-  h2 {
-    color: var(--tertiary-color);
-  }
-
-  #chart {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px 0;
-  }
-</style>
+    #chart {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Investment Portfolio</h1>
+  <div id="content">
+    <nav class="sidebar">
+      <div class="sidebar-links">
+        <ul>
+          <li>
+            <a href="index.html" class="active" title="About Me">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/aboutme.svg" alt="About Me" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">About Me</span>
+            </a>
+          </li>
+          <li>
+            <a href="investmentportfolio.html" title="Investments">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/investments.svg" alt="Investments" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Investments</span>
+            </a>
+          </li>
+          <li>
+            <a href="marketing.html" title="Marketing">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/marketing.svg" alt="Marketing" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Marketing</span>
+            </a>
+          </li>
+          <li>
+            <a href="resume.html" title="Resume">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/resume.svg" alt="Resume" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Resume</span>
+            </a>
+          </li>
+          <li>
+            <a href="pportfolio.html" title="Personal Portfolio">
+              <div class="icon">
+                <div class="contact-icon-container">
+                  <img src="assets/pportfolio.svg" alt="Personal Portfolio" class="contact-icon">
+                </div>
+              </div>
+              <span class="link">Personal Portfolio</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <h2>Stocks</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Stock Symbol</th>
-        <th>Time of Purchase</th>
-        <th>Amount Purchased</th>
-        <th>Price at Purchase</th>
-        <th>Current Price</th>
-        <th>Growth</th>
-        <th>Total Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>BCRX</td>
-        <td>2020-04-15</td>
-        <td contenteditable="true" oninput="updateVisualization()">114</td>
-        <td>2.63</td>
-        <td contenteditable="true" oninput="updateVisualization()">8.56</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>SDGR</td>
-        <td>2020-03-17</td>
-        <td contenteditable="true" oninput="updateVisualization()">5</td>
-        <td>30.41</td>
-        <td contenteditable="true" oninput="updateVisualization()">27.62</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>TCEHY</td>
-        <td>2020-03-17</td>
-        <td contenteditable="true" oninput="updateVisualization()">5</td>
-        <td>22.99</td>
-        <td contenteditable="true" oninput="updateVisualization()">44.64</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>SHOP</td>
-        <td>2020-04-07</td>
-        <td contenteditable="true" oninput="updateVisualization()">40</td>
-        <td>35.57</td>
-        <td contenteditable="true" oninput="updateVisualization()">60.40</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <!-- Add more rows for other stocks -->
-    </tbody>
-  </table>
+    <h1>Investment Portfolio</h1>
 
-  <h2>Visualization</h2>
-  <canvas id="chart"></canvas>
+    <h2>Stocks</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Stock Symbol</th>
+          <th>Time of Purchase</th>
+          <th>Amount Purchased</th>
+          <th>Price at Purchase</th>
+          <th>Current Price</th>
+          <th>Growth</th>
+          <th>Total Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BCRX</td>
+          <td>2020-04-15</td>
+          <td contenteditable="true" oninput="updateVisualization()">114</td>
+          <td>2.63</td>
+          <td contenteditable="true" oninput="updateVisualization()">8.56</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SDGR</td>
+          <td>2020-03-17</td>
+          <td contenteditable="true" oninput="updateVisualization()">5</td>
+          <td>30.41</td>
+          <td contenteditable="true" oninput="updateVisualization()">27.62</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TCEHY</td>
+          <td>2020-03-17</td>
+          <td contenteditable="true" oninput="updateVisualization()">5</td>
+          <td>22.99</td>
+          <td contenteditable="true" oninput="updateVisualization()">44.64</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SHOP</td>
+          <td>2020-04-07</td>
+          <td contenteditable="true" oninput="updateVisualization()">40</td>
+          <td>35.57</td>
+          <td contenteditable="true" oninput="updateVisualization()">60.40</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- Add more rows for other stocks -->
+      </tbody>
+    </table>
 
-  <script>
-    var chart;
+    <h2>Visualization</h2>
+    <canvas id="chart"></canvas>
 
-    function updateVisualization() {
-      var chartData = [];
-      var startDate = new Date("2020-03-01"); // Start date for x-axis
+    <script>
+      var chart;
 
-      // Update table rows and calculate growth and total value
-      var rows = document.getElementsByTagName("tbody")[0].rows;
-      for (var i = 0; i < rows.length; i++) {
-        var stockSymbol = rows[i].cells[0].textContent;
-        var timeOfPurchase = new Date(rows[i].cells[1].textContent);
-        var amountPurchased = parseFloat(rows[i].cells[2].textContent);
-        var priceAtPurchase = parseFloat(rows[i].cells[3].textContent);
-        var currentPrice = parseFloat(rows[i].cells[4].textContent);
-        var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
-        rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
+      function updateVisualization() {
+        var chartData = [];
+        var startDate = new Date("2020-03-01"); // Start date for x-axis
 
-        var totalValue = amountPurchased * currentPrice;
-        rows[i].cells[6].textContent = totalValue.toFixed(2);
+        // Update table rows and calculate growth and total value
+        var rows = document.getElementsByTagName("tbody")[0].rows;
+        for (var i = 0; i < rows.length; i++) {
+          var stockSymbol = rows[i].cells[0].textContent;
+          var timeOfPurchase = new Date(rows[i].cells[1].textContent);
+          var amountPurchased = parseFloat(rows[i].cells[2].textContent);
+          var priceAtPurchase = parseFloat(rows[i].cells[3].textContent);
+          var currentPrice = parseFloat(rows[i].cells[4].textContent);
+          var growth = (currentPrice - priceAtPurchase) / priceAtPurchase;
+          rows[i].cells[5].textContent = (growth * 100).toFixed(2) + "%";
 
-        var currentDate = new Date();
-        var daysDiff = Math.ceil((currentDate - startDate) / (1000 * 60 * 60 * 24)); // Convert to days
-        var futureValue = amountPurchased * priceAtPurchase * Math.pow(1 + growth, daysDiff / 365);
-        chartData.push({
-          stockSymbol: stockSymbol,
-          futureValue: futureValue.toFixed(2),
-          totalValue: totalValue.toFixed(2),
-          daysDiff: daysDiff
+          var totalValue = amountPurchased * currentPrice;
+          rows[i].cells[6].textContent = totalValue.toFixed(2);
+
+          var currentDate = new Date();
+          var daysDiff = Math.ceil((currentDate - startDate) / (1000 * 60 * 60 * 24)); // Convert to days
+          var futureValue = amountPurchased * priceAtPurchase * Math.pow(1 + growth, daysDiff / 365);
+          chartData.push({
+            stockSymbol: stockSymbol,
+            futureValue: futureValue.toFixed(2),
+            totalValue: totalValue.toFixed(2),
+            daysDiff: daysDiff
+          });
+        }
+
+        // Generate chart
+        var chartLabels = Array.from({ length: 365 }, (_, i) => {
+          var date = new Date(startDate);
+          date.setDate(date.getDate() + i);
+          return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
         });
-      }
+        var datasets = [];
+        for (var i = 0; i < chartData.length; i++) {
+          datasets.push({
+            label: chartData[i].stockSymbol,
+            data: Array.from({ length: chartData[i].daysDiff }, (_, j) => chartData[i].futureValue),
+            borderColor: getRandomColor(),
+            borderWidth: 1
+          });
+        }
 
-      // Generate chart
-      var chartLabels = Array.from({ length: 365 }, (_, i) => {
-        var date = new Date(startDate);
-        date.setDate(date.getDate() + i);
-        return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-      });
-      var datasets = [];
-      for (var i = 0; i < chartData.length; i++) {
-        datasets.push({
-          label: chartData[i].stockSymbol,
-          data: Array.from({ length: chartData[i].daysDiff }, (_, j) => chartData[i].futureValue),
-          borderColor: getRandomColor(),
-          borderWidth: 1
-        });
-      }
-
-      if (chart) {
-        chart.data.labels = chartLabels;
-        chart.data.datasets = datasets;
-        chart.update();
-      } else {
-        chart = new Chart("chart", {
-          type: "line",
-          data: {
-            labels: chartLabels,
-            datasets: datasets
-          },
-          options: {
-            scales: {
-              x: {
-                display: true,
-                title: {
+        if (chart) {
+          chart.data.labels = chartLabels;
+          chart.data.datasets = datasets;
+          chart.update();
+        } else {
+          chart = new Chart("chart", {
+            type: "line",
+            data: {
+              labels: chartLabels,
+              datasets: datasets
+            },
+            options: {
+              scales: {
+                x: {
                   display: true,
-                  text: 'Time'
-                }
-              },
-              y: {
-                display: true,
-                title: {
-                  display: true,
-                  text: 'Dollars'
+                  title: {
+                    display: true,
+                    text: 'Time'
+                  }
                 },
-                beginAtZero: true
+                y: {
+                  display: true,
+                  title: {
+                    display: true,
+                    text: 'Dollars'
+                  },
+                  suggestedMin: 0
+                }
               }
             }
-          }
-        });
+          });
+        }
       }
-    }
 
-    function getRandomColor() {
-      var letters = '0123456789ABCDEF';
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+      // Generate a random color for chart line
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
       }
-      return color;
-    }
 
-    // Initial visualization update
-    updateVisualization();
-  </script>
+      updateVisualization();
+    </script>
+    
+  </div>
 </body>
 
 </html>
+
