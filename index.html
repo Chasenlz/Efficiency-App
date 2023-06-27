@@ -22,6 +22,10 @@
       height: 36px;
     }
 
+    .container {
+      display: flex;
+    }
+
     .sidebar {
       position: sticky;
       top: 0;
@@ -33,7 +37,7 @@
       display: flex;
       flex-direction: column;
       transition: width 0.5s ease-in-out;
-      overflow: hidden; /* Add this line */
+      overflow: hidden;
     }
 
     .sidebar:hover {
@@ -57,20 +61,20 @@
 
     .sidebar .sidebar-links li a {
       display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    padding: 0.5rem;
-    white-space: nowrap; /* Add this line */
-    overflow: hidden; /* Add this line */
-    text-overflow: ellipsis; /* Add this line */
+      align-items: center;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .sidebar .sidebar-links li a:hover {
       background-color: var(--primary-color);
       border-radius: 10px;
-      white-space: initial; /* Add this line */
+      white-space: initial;
     }
 
     .sidebar .sidebar-links .icon {
@@ -81,37 +85,12 @@
       justify-content: flex-start;
       padding-left: 0.5rem;
     }
-    
-    .contact-icon-container {
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 0.5rem;
-      padding: 4px;
-    }
 
-    .contact {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem;
-    }
-
-    .contact .contact-icon {
-      width: 36px;
-      height: 36px;
-      margin-right: 0.5rem;
-    }
-
-    .contact:hover span.link {
+    .content {
+      flex: 1;
+      padding: 1rem;
       color: var(--text-color);
-    }
-
-    .contact span.link {
-      display: none;
-      color: var(--text-color);
+      background-color: var(--primary-color);
     }
 
     #content {
